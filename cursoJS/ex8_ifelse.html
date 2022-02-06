@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex8 If e Else</title>
+</head>
+
+<body>
+
+    salario atual do funcionario = <input id="salario_atual" type="text"><br />
+    <button onclick="aumentarSalario()">Enviar</button>
+
+
+    <script>
+        /*As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver um script que calculará os reajustes.
+
+        Faça um script que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+
+            salários até R$ 280,00 (incluindo) : aumento de 20%
+            salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+            salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+            salários de R$ 1500,00 em diante : aumento de 5% 
+            Após o aumento ser realizado, informe na tela:
+            o salário antes do reajuste;
+            o percentual de aumento aplicado;
+            o valor do aumento;
+            o novo salário, após o aumento.*/
+
+
+        function aumentarSalario() {
+
+            let salario_atual = parseFloat(document.getElementById("salario_atual").value)
+            let novo_salario = null
+            let valor_aumento = null
+
+            if (salario_atual < 280) {
+
+                novo_salario = salario_atual + (salario_atual * 20 / 100)
+                valor_aumento = novo_salario - salario_atual
+
+                alert("Salario Anterior: " + salario_atual + "\n Percentual do aumento aplicado: 20% \n Valor do Aumento: " + valor_aumento + " \n Novo Salario: " + novo_salario)
+
+
+            } else if (salario_atual >= 280 && salario_atual < 700) {
+
+                novo_salario = salario_atual + (salario_atual * 15 / 100)
+                valor_aumento = novo_salario - salario_atual
+
+                alert("Salario Anterior: " + salario_atual + "\n Percentual do aumento aplicado: 15% \n Valor do Aumento: " + valor_aumento + " \n Novo Salario: " + novo_salario)
+
+
+            } else if (salario_atual >= 700 && salario_atual < 1500) {
+
+                novo_salario = salario_atual + (salario_atual * 10 / 100)
+                valor_aumento = novo_salario - salario_atual
+
+                alert("Salario Anterior: " + salario_atual + "\n Percentual do aumento aplicado: 10% \n Valor do Aumento: " + valor_aumento + " \n Novo Salario: " + novo_salario)
+
+
+            } else if (salario_atual >= 1500) {
+
+                novo_salario = salario_atual + (salario_atual * 5 / 100)
+                valor_aumento = novo_salario - salario_atual
+
+                alert("Salario Anterior: " + salario_atual + "\n Percentual do aumento aplicado: 5% \n Valor do Aumento: " + valor_aumento + " \n Novo Salario: " + novo_salario)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

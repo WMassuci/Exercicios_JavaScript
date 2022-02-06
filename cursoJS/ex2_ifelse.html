@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex2 If & Else</title>
+
+</head>
+
+<body>
+
+    Primeira Nota: <input id="nota1" type="number"><br />
+    Segunda Nota: <input id="nota2" type="number"><br />
+    <button onclick="media()">Calcular Média</button>
+
+    <script>
+        /*Faça um script que pede duas notas de um aluno. Em seguida ele deve calcular a média do aluno e dar o seguinte resultado:
+
+        A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+        A mensagem "Reprovado", se a média for menor do que sete;
+        A mensagem "Aprovado com Distinção", se a média for igual a dez.*/
+
+        function media() {
+
+            let nota1 = parseFloat(document.getElementById("nota1").value)
+            let nota2 = parseFloat(document.getElementById("nota2").value)
+
+            let media = (nota1 + nota2) / 2
+
+            if (media >= 7 && media <= 9) {
+
+                alert("Aprovado")
+
+            } else if (media < 7) {
+
+                alert("Reprovado")
+
+            } else if (media == 10) {
+
+                alert("Aprovado com Distinção")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 1 Operador Ternario</title>
+
+    <script>
+
+        //receber a nota e faltas do aluno, a media tem que estar acima de 6 e faltas menos de 15
+
+        let nota = parseInt(prompt("Informe a nota do aluno: "))
+        let faltas = parseInt(prompt("Informe as faltas do aluno: "))
+
+        let media = 6
+        let faltas_maximas = 15
+
+        let resultado = nota >= media && faltas <= faltas_maximas? "Aprovado" : "Reprovado"
+
+        document.write(resultado)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

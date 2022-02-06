@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 10 If e else</title>
+</head>
+<body>
+    
+    Informe um Número: <input id="numero" type="number">
+    <button onclick="verificar()">Enviar</button>
+
+
+    <script>
+       /* Faça um script que leia um número e exiba o dia correspondente da semana. (1-Domingo, 2- Segunda, etc.), se digitar outro valor deve aparecer valor inválido.*/
+
+        function verificar(){
+
+            let numero = parseInt(document.getElementById("numero").value)
+
+            if(numero == 1){
+
+                alert(numero + " Domingo")
+
+            } else if(numero == 2){
+
+                alert(numero + " Segunda")
+
+            } else if(numero == 3){
+
+                alert(numero + " Terça")
+
+            } else if(numero == 4){
+
+                alert(numero + " Quarta")
+
+            } else if(numero == 5){
+
+                alert(numero + " Quinta ")
+
+            } else if(numero == 6){
+
+                alert(numero + " Sexta")
+
+            } else if(numero == 7){
+
+                alert(numero + " Sabado")
+
+            } else {
+
+                alert("Valor Inválido!")
+
+            }   
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If & Else - Operadores Condicionais</title>
+
+    <script>
+
+        let nome = prompt('Informe o nome do Estudante: ')
+        let nota1 = parseInt(prompt('Informe a primeira nota do aluno: '))
+        let nota2 = parseInt(prompt('Informe a segunda nota do aluno: '))
+        let faltas = parseInt(prompt('Informe a quantidade de faltas do estudante: '))
+
+        let max_faltas = 15
+        let media = 7
+
+        let nota_final = (nota1 + nota2) / 2
+
+        if (nota_final >= media && faltas <= max_faltas) {
+
+            document.write('O Aluno(a) ' + nome + ' esta APROVADO!<br/>')
+            document.write('Nota_Final: ' + nota_final + '<br/>')
+            document.write('Média Necessária = 7 <br/>')
+            document.write('Numero de Faltas do Estudante: ' + faltas + '<br/>')
+            document.write('Limite de Faltas: ' + max_faltas)
+
+        } else {
+
+            document.write('O Aluno(a) ' + nome + ' esta REPROVADO!<br/>')
+            document.write('Nota_Final: ' + nota_final + '<br/>')
+            document.write('Média Necessária = 7 <br/>')
+            document.write('Numero de Faltas do Estudante: ' + faltas + '<br/>')
+            document.write('Limite de Faltas: ' + max_faltas)
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
