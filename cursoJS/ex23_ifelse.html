@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 23</title>
+</head>
+
+<body>
+
+    <h1>Venda de Frutas</h1>
+
+    Informe o peso das Maças: <input id="pesoMaca" type="number"><br />
+    Informe o peso dos Morangos: <input id="pesoMorango" type="number"><br />
+    <button onclick="verificarPrecoFinal()">Enviar</button>
+
+
+
+    <script>
+        /* Uma fruteira está vendendo frutas com a seguinte tabela de preços:
+                      Até 5 Kg                Acima de 5 Kg
+
+        Morango       R$ 2,50 por Kg          R$ 2,20 por Kg
+        Maçã          R$ 1,80 por Kg          R$ 1,50 por Kg
+        Se o cliente comprar mais de 8 Kg em frutas  ou o valor total da compra ultrapassar R$ 25,00, receberá ainda um desconto de 10% sobre este total. Escreva um algoritmo para ler a quantidade (em Kg) de morangos e a quantidade (em Kg) de maças adquiridas e escreva o valor a ser pago pelo cliente.*/
+
+        function verificarPrecoFinal() {
+
+            let pesoMaca = (document.getElementById('pesoMaca').value)
+            let pesoMorango = (document.getElementById('pesoMorango').value)
+
+            let pesoTotal = null
+            let valorTotal = null
+            let valorFinal = null
+
+            let precoMaca = null
+            let precoMorango = null
+
+            pesoMaca = pesoMaca / 1000
+
+            pesoTotal = pesoMaca + pesoMorango
+
+            if (pesoTotal <= 5) {
+
+                precoMaca = pesoMaca * 2.50
+                precoMorango = pesoMorango * 1.80
+
+                valorTotal = precoMaca + precoMorango
+
+            } else if (pesoTotal > 5) {
+
+                precoMaca = pesoMaca * 2.20
+                precoMorango = pesoMorango * 1.50
+
+                valorTotal = precoMaca + precoMorango
+            }
+
+
+
+            //aplicando desconto
+
+            if (valorTotal > 25) {
+
+                valorFinal = valorTotal - (valorTotal * 10 / 100)
+
+                document.write('Valor Total: ' + valorFinal.toLocaleString('pt-BR', 'BRL', 'currency', '2') + '<br/>')
+                document.write('Desconto Aplicado: 10%')
+
+            } else {
+
+                document.write('Valor Total: ' + valorTotal.toLocaleString('pt-BR', 'BRL', 'currency', '2') + '<br/>')
+                document.write('Desconto Aplicado: 0%')
+            }
+        }
+    </script>
+</body>
+
+</html>

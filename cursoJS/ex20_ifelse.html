@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 20 if e else</title>
+</head>
+
+<body>
+
+    Digite o primeiro numero: <input id="n1" type="text"><br />
+    Digite o segundo numero: <input id="n2" type="text"><br />
+    Qual Operação deseja realizar: <input id="operador" type="text"><br />
+    <button onclick="verificar()">Enviar</button>
+
+    <script>
+        /*Faça um script que leia 2 números e em seguida pergunte ao usuário qual operação ele deseja realizar. O resultado da operação deve ser acompanhado de uma frase que diga se o número é:
+
+       par ou ímpar;
+       positivo ou negativo;
+       inteiro ou decimal.*/
+
+        function verificar() {
+
+            let n1 = (document.getElementById('n1').value)
+            let n2 = (document.getElementById('n2').value)
+            let operador = (document.getElementById('operador').value)
+
+            let resultado, par = null
+
+
+            if (operador == '+') {
+
+                resultado = n1 + n2
+
+                //verificando se é Par ou Impar
+                if (resultado % 2 == 0) {
+
+                    par = true
+
+                } else {
+
+                    par = false
+                }
+
+
+                //verificando se é positivo ou negativo
+                if (resultado >= 0) {
+
+                    positivo = true
+
+                } else {
+
+                    positivo = false
+                }
+
+            }
+
+            document.write("Operador escolhido = " + operador + "<br/>")
+            document.write("A Soma entre " + n1 + " e " + n2 + " = " + resultado + "<br/>")
+            document.write("O Resultado é Par? = " + par + "<br/>")
+            document.write("O Resultado é Positivo? = " + positivo + "<br/>")
+
+        }
+    </script>
+
+</body>
+
+</html>

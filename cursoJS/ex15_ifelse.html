@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 15 if else</title>
+</head>
+
+<body>
+
+    Informe o Dia: <input id="dia" type="number"><br />
+    Informe o Mes: <input id="mes" type="number"><br />
+    Informe o Ano: <input id="ano" type="number"><br />
+
+    <button onclick="verificarData()">Verificar</button><br />
+
+
+    <script>
+        //Faça um script que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.
+
+        function verificarData() {
+
+            let dia = parseInt(document.getElementById('dia').value)
+            let mes = parseInt(document.getElementById('mes').value)
+            let ano = parseInt(document.getElementById('ano').value)
+
+
+
+            switch (mes) {
+
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                    if (dia <= 31) {
+
+                        document.write('Data Válida')
+
+                    } else {
+
+                        document.write('Data Inválida, mes com mais de 31 dias')
+                    }
+
+                    break;
+
+                case 4: case 6: case 9: case 11:
+                    if (dia <= 30) {
+
+                        document.write('Data Válida')
+
+                    } else {
+
+                        document.write('Data Invalida, mes com mais de 30 dias')
+                    }
+
+                    break;
+
+                case 2:
+                    if ((ano % 400 == 0) || (ano % 4 == 0 && ano % 100 != 0)) {
+
+                        if (dia <= 29) {
+
+                            document.write("Data Válida")
+
+                        } else {
+
+                            document.write("Invalido mes com mais de 29 Dias")
+                        }
+
+                    } else {
+
+                        if (dia <= 28) {
+
+                            document.write('Data válida')
+
+                        } else {
+
+                            document.write('Invalido mes com mais de 28 dias')
+                        }
+                    }
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 17 if else</title>
+</head>
+
+<body>
+
+    Informe um valor: <input id="valor" type="number"><br />
+    <button onclick="verificarValor()">Verificar</button>
+
+    <script>
+
+        /*Faça um script que leia um número inteiro menor que 1000 e imprima a quantidade de centenas, dezenas e unidades do mesmo.
+       Observando os termos no plural a colocação do "e", da vírgula entre outros. Exemplo:
+
+       326 = 3 centenas, 2 dezenas e 6 unidades
+       12 = 1 dezena e 2 unidades Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16*/
+
+
+        function verificarValor() {
+
+            let valor = parseInt(document.getElementById('valor').value)
+            let unidade, dezena, passo1, passo2 = null
+
+            if (valor <= 9) {
+
+                unidade = valor % 10
+                document.write("Valor: " + valor + "<br/> Unidade: " + unidade)
+            }
+
+            if (valor >= 10 && valor <= 99) {
+
+                unidade = valor % 10
+                passo1 = valor - unidade
+                passo2 = passo1 / 10
+                dezena = passo2 % 10
+
+                document.write("Valor: " + valor + "<br/> Dezena: " + dezena + "<br/> Unidade: " + unidade)
+            }
+
+            if (valor >= 100 && valor <= 999) {
+
+                unidade = valor % 10
+                passo1 = valor - unidade
+                passo2 = passo1 / 10
+                dezena = passo2 % 10
+
+                //achando a centena
+                valor_novo = (valor - dezena) / 10
+                centena = parseInt(valor_novo)
+
+                document.write("Valor: " + valor + "<br/> Centena: " + centena + "<br/> Dezena: " + dezena + "<br/> Unidade: " + unidade)
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 21 JS</title>
+
+
+</head>
+
+<body>
+
+    <h1>Questionário:</h1>
+
+    Telefonou para a Vitima ? <input id="telefonou" type="text"><br />
+    Esteve no local do crime ? <input id="local" type="text"><br />
+    Mora perto da vítima ? <input id="mora" type="text"><br />
+    Devia para a Vítima ? <input id="devia" type="text"><br />
+    Já Trabalhou para a Vítima ? <input id="trabalhou" type="text"><br />
+    <button onclick="verificarCrime()">Enviar</button>
+
+
+    <script>
+        /*Faça um script que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+        "Telefonou para a vítima?"
+        "Esteve no local do crime?"
+        "Mora perto da vítima?"
+        "Devia para a vítima?"
+        "Já trabalhou com a vítima?" O script deve no final emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa responder positivamente a 2 questões ela deve ser classificada como "Suspeita", entre 3 e 4 como "Cúmplice" e 5 como "Assassino". Caso contrário, ele será classificado como "Inocente".*/
+
+
+        function verificarCrime() {
+
+            let telefonouVitima = (document.getElementById('telefonou').value)
+            let esteveLocal = (document.getElementById('local').value)
+            let moraVitima = (document.getElementById('mora').value)
+            let deviaVitima = (document.getElementById('devia').value)
+            let trabalhouVitima = (document.getElementById('trabalhou').value)
+
+
+            let primeira_resposta = null
+            let segunda_resposta = null
+            let terceira_resposta = null
+            let quarta_resposta = null
+            let quinta_resposta = null
+            let total_perguntas = null
+
+            if (telefonouVitima == 'sim') {
+
+                primeira_resposta = 1
+
+            } else {
+
+                primeira_resposta = 0
+            }
+
+            //
+
+            if (esteveLocal == 'sim') {
+
+                segunda_resposta = 1
+            } else {
+
+                segunda_resposta = 0
+            }
+
+            //
+
+            if (moraVitima == 'sim') {
+
+                terceira_resposta = 1
+            } else {
+
+                terceira_reposta = 0
+            }
+
+            //
+
+            if (deviaVitima == 'sim') {
+
+                quarta_resposta = 1
+            } else {
+
+                quarta_resposta = 0
+            }
+
+
+            //
+
+            if (trabalhouVitima == 'sim') {
+
+                quinta_resposta = 1
+            } else {
+
+                quinta_resposta = 0
+            }
+
+            //
+
+
+            total_perguntas = primeira_resposta + segunda_resposta + terceira_resposta + quarta_resposta + quinta_resposta
+
+            if (total_perguntas == 0) {
+
+                document.write('Classificação: Inocente')
+            }
+
+            if ((total_perguntas >= 1) && (total_perguntas <= 2)) {
+
+                document.write('Classificação: Suspeita')
+
+            } else if ((total_perguntas >= 3) && (total_perguntas <= 4)) {
+
+                document.write('Classificação: Cúmplice')
+
+            } else if (total_perguntas == 5) {
+
+                document.write('Classificação: Assasino')
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

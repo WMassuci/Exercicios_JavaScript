@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 14 If e else</title>
+</head>
+
+<body>
+
+    Informe qualquer Ano: <input id="ano" type="number"><br />
+    <button onclick="verificarAno()">Verificar</button>
+
+    <script>
+        //Faça um script que peça um número correspondente a um determinado ano e em seguida informe se este ano é ou não bissexto.
+
+        function verificarAno() {
+
+            let ano = parseInt(document.getElementById('ano').value)
+
+
+            if (ano % 400 == 0 && ano % 4 == 0) {
+
+                document.write('O Ano ' + ano + ' é Bissexto!')
+
+            } else {
+
+                if (ano % 4 == 0 && ano % 100 != 0) {
+
+                    document.write('O Ano ' + ano + ' é Bissexto!')
+
+                } else {
+
+                    document.write('O Ano ' + ano + ' NÃO é Bissexto!')
+                }
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

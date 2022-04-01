@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 16 if else</title>
+</head>
+
+<body>
+
+    Informe qualquer Número: <input id="numero" type="number"><br />
+
+    <button onclick="verificarParImpar()">Verificar</button>
+
+    <script>
+        //Faça um script que peça um número inteiro e determine se ele é par ou ímpar.
+        //Dica: utilize o operador módulo (resto da divisão): %
+
+        function verificarParImpar() {
+
+            let numero = parseInt(document.getElementById('numero').value)
+
+            if (numero % 2 == 0) {
+
+                document.write("O Numero " + numero + " é PAR!")
+
+            } else {
+
+                document.write("O Numero " + numero + " é IMPAR!")
+            }
+        }
+    </script>
+
+</body>
+
+</html>

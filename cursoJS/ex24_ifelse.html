@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercicio 24</title>
+</head>
+
+<body>
+
+    <h1>Hipermercado Tabajara</h1>
+
+    Informe o Tipo de Carne comprada: <input id="tipoCarne" type="text"><br />
+    Informe a Quantidade de Carne comprada: <input id="quantCarne" type="number"><br />
+    Informe o Tipo de Pagamento[se for cartão tabajara = escrever tabajara]: <input id="tipoPagamento"
+        type="text"><br />
+    <button onclick="verificarValoresFinal()">Entrar</button>
+
+
+    <script>
+        /*O Hipermercado Tabajara está com uma promoção de carnes que é imperdível. Confira:
+                          Até 5 Kg               Acima de 5 Kg
+        File Duplo      R$ 4,90 por Kg          R$ 5,80 por Kg
+        Alcatra         R$ 5,90 por Kg          R$ 6,80 por Kg
+        Picanha         R$ 6,90 por Kg          R$ 7,80 por Kg
+        Para atender a todos os clientes, cada cliente poderá levar apenas um dos tipos de carne da promoção, porém não há limites para a quantidade de carne por cliente.    (Se compra for feita no cartão Tabajara o cliente receberá ainda um desconto de 5% sobre o total a compra).       (Escreva um script que peça o tipo e a quantidade de carne comprada pelo usuário)       e (gere um cupom fiscal, contendo as informações da compra: tipo e quantidade de carne, preço total, tipo de pagamento, valor do desconto e valor a pagar).*/
+
+        function verificarValoresFinal() {
+
+            let quantCarne = (document.getElementById('quantCarne').value)
+            let tipoCarne = (document.getElementById('tipoCarne').value)
+            let tipoPagamento = (document.getElementById('tipoPagamento').value)
+
+            let precoFile = null
+            let precoAlcatra = null
+            let precoPicanha = null
+            let valor_final_com_desconto = null
+
+
+            //File
+            if (tipoCarne == 'file') {
+
+                if (quantCarne <= 5) {
+
+                    precoFile = quantCarne * 4.90
+
+                } else if (quantCarne > 5) {
+
+                    precoFile = quantCarne * 5.80
+                }
+
+                if (tipoPagamento == 'tabajara') {
+
+                    valor_final_com_desconto = precoFile - (precoFile * 5 / 100)
+
+                    document.write("Tipo de Carne: " + tipoCarne + "<br/>")
+                    document.write("Quantidade de Carne: " + quantCarne + "<br/>")
+                    document.write("Preço Total: " + precoFile + "<br/>")
+                    document.write("Tipo de Pagamento: " + tipoPagamento + "<br/>")
+                    document.write("Valor do Desconto: 5% <br/>")
+                    document.write("Valor a Pagar: " + valor_final_com_desconto.toLocaleString('pt-BR', 'BRL', 'currency', '2'))
+
+                } else {
+
+                    document.write("Tipo de Carne: " + tipoCarne + "<br/>")
+                    document.write("Quantidade de Carne: " + quantCarne + "<br/>")
+                    document.write("Preço Total: " + precoFile + "<br/>")
+                    document.write("Tipo de Pagamento: " + tipoPagamento + "<br/>")
+                    document.write("Valor do Desconto: 0% <br/>")
+                    document.write("Valor a Pagar: " + precoFile.toLocaleString('pt-BR', 'BRL', 'currency', '2'))
+                }
+
+
+
+                //Alcatra
+            } else if (tipoCarne == 'alcatra') {
+
+                if (quantCarne <= 5) {
+
+                    precoAlcatra = quantCarne * 5.90
+
+                } else if (quantCarne > 5) {
+
+                    precoAlcatra = quantCarne * 6.80
+                }
+
+
+                if (tipoPagamento == 'tabajara') {
+
+                    valor_final_com_desconto = precoAlcatra - (precoAlcatra * 5 / 100)
+
+                    document.write("Tipo de Carne: " + tipoCarne + "<br/>")
+                    document.write("Quantidade de Carne: " + quantCarne + "<br/>")
+                    document.write("Preço Total: " + precoAlcatra + "<br/>")
+                    document.write("Tipo de Pagamento: " + tipoPagamento + "<br/>")
+                    document.write("Valor do Desconto: 5% <br/>")
+                    document.write("Valor a Pagar: " + valor_final_com_desconto.toLocaleString('pt-BR', 'BRL', 'currency', '2'))
+
+                } else {
+
+                    document.write("Tipo de Carne: " + tipoCarne + "<br/>")
+                    document.write("Quantidade de Carne: " + quantCarne + "<br/>")
+                    document.write("Preço Total: " + precoAlcatra + "<br/>")
+                    document.write("Tipo de Pagamento: " + tipoPagamento + "<br/>")
+                    document.write("Valor do Desconto: 0% <br/>")
+                    document.write("Valor a Pagar: " + precoAlcatra.toLocaleString('pt-BR', 'BRL', 'currency', '2'))
+                }
+
+
+
+
+                //Picanha
+            } else if (tipoCarne == "picanha") {
+
+                if (quantCarne <= 5) {
+
+                    precoPicanha = quantCarne * 5.90
+
+                } else if (quantCarne > 5) {
+
+                    precoPicanha = quantCarne * 6.80
+                }
+
+
+                if (tipoPagamento == 'tabajara') {
+
+                    valor_final_com_desconto = precoPicanha - (precoPicanha * 5 / 100)
+
+                    document.write("Tipo de Carne: " + tipoCarne + "<br/>")
+                    document.write("Quantidade de Carne: " + quantCarne + "<br/>")
+                    document.write("Preço Total: " + precoPicanha + "<br/>")
+                    document.write("Tipo de Pagamento: " + tipoPagamento + "<br/>")
+                    document.write("Valor do Desconto: 5% <br/>")
+                    document.write("Valor a Pagar: " + valor_final_com_desconto.toLocaleString('pt-BR', 'BRL', 'currency', '2'))
+
+                } else {
+
+                    document.write("Tipo de Carne: " + tipoCarne + "<br/>")
+                    document.write("Quantidade de Carne: " + quantCarne + "<br/>")
+                    document.write("Preço Total: " + precoPicanha + "<br/>")
+                    document.write("Tipo de Pagamento: " + tipoPagamento + "<br/>")
+                    document.write("Valor do Desconto: 0% <br/>")
+                    document.write("Valor a Pagar: " + precoPicanha.toLocaleString('pt-BR', 'BRL', 'currency', '2'))
+                }
+
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12 if else</title>
+</head>
+
+<body>
+
+    Informe o primeiro lado do triangulo: <input id="l1" text="text"><br />
+    Informe o segundo lado do triangulo: <input id="l2" text="text"><br />
+    Informe o terceiro lado do trianhulo <input id="l3" text="text"><br />
+    <button onclick="verificar()">Enviar</button>
+
+
+    <script>
+
+        /*Faça um script que peça os 3 lados de um triângulo. O script deverá informar se os valores podem ser um triângulo. Indique, caso os lados formem um triângulo, se o mesmo é: equilátero, isósceles ou escaleno.
+
+        Dicas:
+        Três lados formam um triângulo quando a soma de quaisquer dois lados for maior que o terceiro;
+        Triângulo Equilátero: três lados iguais;
+        Triângulo Isósceles: quaisquer dois lados iguais;
+        Triângulo Escaleno: três lados diferentes;*/
+
+
+        function verificar() {
+
+            let l1 = parseFloat(document.getElementById("l1").value)
+            let l2 = parseFloat(document.getElementById("l2").value)
+            let l3 = parseFloat(document.getElementById("l3").value)
+
+            if (l1 < l2 + l3 && l2 < l1 + l3 && l3 < l2 + l1) {
+
+                alert("Os Segmentos acima PODEM formar um triangulo!")
+
+                if (l1 == l2 && l2 == l3) {
+
+                    alert("É um Triangulo Equilátero")
+
+                } else if (l1 != l2 && l2 != l3 && l1 != l3) {
+
+                    alert("É um Triangulo Escaleno")
+
+                } else if (l1 == l2 || l2 == l3 || l1 == l3) {
+
+                    alert("É um Triangulo Isósceles")
+                }
+
+            } else {
+
+                alert("Os segmentos acima NÃO podem formar Triangulo!")
+            }
+        }
+    </script>
+
+</body>
+
+</html>
