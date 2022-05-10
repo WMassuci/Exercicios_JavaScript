@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funçoes CallBack JS</title>
+
+    <script>
+
+       /* function exibirArtigo(id, callbackSucesso, callbackErro){
+            //logica recuperar o artigo via requisição http
+            if(false){
+
+                callbackSucesso('Funções de callback em JS', 'As função de callback são muito utilizadas...')
+
+             } else{
+
+                callbackErro('Erro ao recuperar os dados')
+            }
+        }
+
+        var callbackSucesso = function(titulo,descricao){
+            document.write('<h1>' +titulo+ '</h1>')
+            document.write('<hr/>')
+            document.write('<h1>' +descricao+ '</h1>')
+        }
+
+        var callbackErro = function(erro){
+            document.write('<p> <b>ERRO:</b> ' +erro+ '</p>')
+        }
+
+        exibirArtigo(1, callbackSucesso, callbackErro)*/
+
+
+
+        //exibir os dados pessoais utilizando a função callback
+
+
+       function exibirDados(id, callbackSucesso, callbackErro){
+
+            if(true){
+
+                callbackSucesso('Wander','21','Analista de Sistemas')
+
+            }else{
+
+                callbackErro('Dados não encontrados')
+            }
+       }
+
+       var callbackSucesso = function(nome,idade,profissao){
+
+            document.write("Nome: " +nome)
+            document.write("<hr/>")
+            document.write("Idade: " +idade)
+            document.write("<hr/>")
+            document.write("Profissão: " +profissao)
+       }
+
+
+
+       var callbackErro = function(erro){
+
+            document.write("Erro: " +erro)
+       }
+
+       exibirDados(1,callbackSucesso, callbackErro)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

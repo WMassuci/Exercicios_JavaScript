@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções Datas</title>
+
+    <script>
+
+        //Metodos GET -> Serve para recuperar dados
+        //Metodo SET -> Serve para configurar dados
+
+        //var data = new Date() ///preciso criar uma estancia da data antes.. o js faz uma requisição ao browser para pegar a data de acordo com o sistema operacional
+
+        //document.write(data.getDate()+ ' / ' +(data.getMonth()+1)+ ' / ' +data.getFullYear())
+
+        // getMonth() -> tem que somar com +1 pois o mes nessa função começa com 0, por isso a soma
+
+
+        /*var data = new Date()
+
+        //Desafio 1: adicionar ou remover dias da data:
+        document.write(data.toString())
+        document.write("<hr/>")
+
+        //adicionando + / - removendo dia a mais
+        data.setDate(data.getDate() - 720)
+        document.write(data.toString())
+
+        document.write("<br/><br/> <hr/>")
+
+        //adicionando ou removendo meses a mais
+        data.setMonth(data.getMonth() - 70)
+        document.write(data.toString())
+
+        document.write("<br/><br/> <hr/>")
+
+        //adicionando ou removendo Anos a mais
+        data.setFullYear(data.getFullYear() - 90)
+        document.write(data.toString())*/
+
+
+        //FAZENDO CALCULO ENTRE DUAS DATAS:
+
+        //14/06/2000
+        var data1 = new Date(2000, 5, 14)
+
+        //14/06/2021
+        var data2 = new Date(2021, 5, 14)
+
+        document.write(data1.toString()) // traz a representação textual da data
+        document.write("<hr/>")
+        document.write(data2.toString())
+
+
+        document.write("<br/> <br/> <hr/>")
+        //converter as datas para algo que possamos calcular
+        document.write(data1.getTime())
+        document.write("<hr/>")
+        document.write(data2.getTime())
+
+
+        document.write("<br/> <br/> <hr/>")
+        // O Get Time pega o milisegundos a partir de 1 de janeiro de 1970
+
+        //encontrar o milisegundos entre data 1 e data 2
+        var milesegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write(milesegundos_entre_datas)
+        
+
+        //Agora temos que saber quanto é esse valor me dias
+        //1 dia é 24, cada hora tem 60 Minutos, cada minuto tem 60 segundos e cada segundos tem 1000 milisegundos
+        //entao quantos milesegundos tem 1 dia?
+        document.write("<br/> <br/> <hr/>")
+
+        var milesegundo_por_dia = 1*24*60*60*1000
+        document.write(milesegundo_por_dia)
+
+
+        document.write("<br/> <br/> <hr/>")
+
+        //dividir o milesegunso entre datas e milesegundos por dia
+        document.write('A Diferença entre Data1 e Data2 é ' +Math.ceil(milesegundos_entre_datas / milesegundo_por_dia)+ ' Dias')
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio funçoes data</title>
+
+
+    <script>
+        //Setar a data 15/05/2021:
+
+        /*document.write("<h2> Setar a Data 15/05/2021: </h2>")
+        document.write('<br/> <hr/>')
+
+        let data1 = new Date(2021, 4, 15)
+        document.write(data1.toString())
+
+        document.write('<br/> <hr/>')
+
+        //alterando o dia:
+        data1.setDate(data1.getDate() + 2)
+        document.write(data1.toString())
+
+
+        document.write('<br/> <hr/>')
+        //alterando o mes:
+        data1.setMonth(data1.getMonth() +5)
+        document.write(data1.toString())
+
+
+        document.write('<br/> <hr/>')
+        //alterando o ano:
+        data1.setFullYear(data1.getFullYear() +1)
+        document.write(data1.toString())
+
+
+        document.write('<br/> <br/> <hr/>')
+
+
+        //Setar a Data 09/06/2021:
+        document.write("<h2> Setar a Data: 09/06/2021 </h2>")
+
+
+        let data2 = new Date(2021, 5, 9)
+
+        document.write("<hr/>")
+
+        document.write(data2.toString())
+
+        document.write("<br/> <hr/>")
+
+        //removendo o Dia:
+        data2.setDate(data2.getDate() -4)
+        document.write(data2.toString())
+
+
+        document.write("<br/> <hr/>")
+
+        //removendo o mes:
+        data2.setMonth(data2.getMonth() -3)
+        document.write(data2.toString())
+
+        document.write("<br/> <hr/>")
+
+        //removendo o ano:
+        data2.setFullYear(data2.getFullYear() -21)
+        document.write(data2.toString())
+
+
+        document.write("<br/> <br/> <hr/>")**/
+
+        let data1 = new Date(2021, 4, 15)
+        let data2 = new Date(2021, 5, 9)
+
+        document.write("<h2> Calcular a diferença de dias entre as datas 15/05/2021 e 09/06/2021 </h2>")
+
+        //converter as datas utilizando o GET TIME
+        document.write(data1.getTime())
+        document.write("<hr/>")
+        document.write(data2.getTime())
+
+        let milesegundos_entre_datas = Math.abs(data1.getTime() - data2.getTime())
+        document.write("<hr/>")
+        document.write(milesegundos_entre_datas)
+
+        document.write("<hr/>")
+        let milesegundo_por_dia = 1*24*60*60*1000
+        document.write(milesegundo_por_dia)
+
+        document.write("<hr/>")
+        document.write("A Diferença de dias entre as datas é " +(milesegundos_entre_datas / milesegundo_por_dia)+ " Dias")
+
+        let present = new Date()
+
+        console.log(present)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
