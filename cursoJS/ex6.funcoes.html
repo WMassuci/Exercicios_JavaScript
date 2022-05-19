@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 6 Funções</title>
+  </head>
+  <body>
+    <script>
+      /*Um número é dito perfeito quando ele é igual a soma de seus fatores. Por exemplo, os fatores de 6 são 1, 2 e 3 (ou seja, podemos dividir 6 por 1, por 2 e por 3) e 6=1+2+3, logo 6 é um número perfeito. Escreva uma função que recebe um inteiro e dizer se é perfeito ou não. Em outra função, peça um inteiro n e mostre todos os números perfeitos até n.*/
+
+      
+     exibirNumeroPerfeito(6)
+
+     function exibirNumeroPerfeito(numero){
+       let soma = 0
+       let metade = 0
+
+        metade = numero / 2
+       for(let y = 1; y <= metade; y++){
+         if(numero % y == 0){
+           soma = soma + y
+         }
+       }
+
+
+       if(soma == numero){
+         document.write("O Numero " +numero+ " é perfeito")
+       } else{
+         document.write("O Numero " +numero+ " não é perfeito")
+       }
+     }
+    </script>
+  </body>
+</html>

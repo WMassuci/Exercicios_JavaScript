@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Selecionando elementos!</title>
+  </head>
+  <body>
+    Nome:  <input type="text" name="dados"/><br>
+    Idade: <input type="number" name="dados"><br>
+    <button onclick="dados()">Enviar</button>
+
+    <script>
+      //getElementsByName
+      function dados(){
+        let nome = (document.getElementsByName('dados')[0].value)
+        let idade = (document.getElementsByName('dados')[1].value)
+  
+        alert('Ola ' +nome+ ' voce tem ' +idade+ ' anos!')
+      }
+    </script>
+  </body>
+</html>

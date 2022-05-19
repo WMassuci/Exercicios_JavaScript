@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio Funções 5</title>
+</head>
+<body>
+  
+
+  <script>
+      /*Crie uma função que recebe um inteiro positivo e teste para saber se ele é primo ou não. Faça um script que recebe um inteiro n e mostra todos os primos, de 1 até n.*/  
+
+      exibirPrimos(10)
+
+      function exibirPrimos(limite){
+
+        for(let numero = 2; numero < limite; numero++){
+          let ehPrimo = true
+
+          for(let divisor = 2; divisor < numero; divisor++){
+            if(numero % divisor === 0){
+              ehPrimo = false
+              break;
+            }
+          }
+
+          if(ehPrimo)console.log(numero)
+        }
+      }
+
+  </script>
+</body>
+</html>

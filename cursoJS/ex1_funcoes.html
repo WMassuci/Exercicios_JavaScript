@@ -1,22 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exercicio Funções 1</title>
 
+  </head>
+  <body>
+    
+    <h2>Conversão de Celsius p/ Farenheit e Farenheit p/ Celsius</h2>
+
+    Celsius p/ Farenheit<input type="radio" id="CtoF" name="CtoF"><br/>
+    Farenheit p/ Celsius<input type="radio" id="FtoC" name="FtoC"><br/>
+    Informe o valor da temperatura: <input type="number" id="num"><br/>
+    <button onclick="main()">Converter</button>
+
+    <div id="resposta">Resposta:</div>
 
     <script>
-        /*Escreva um script que pergunta ao usuário se ele deseja converter uma temperatura de grau Celsius para Farenheit ou vice-versa. Para cada opção, crie uma função. Crie uma terceira, que é um menu para o usuário escolher a opção desejada, onde esse menu chama a função de conversão correta.*/
+      /*Escreva um script que pergunta ao usuário se ele deseja converter uma temperatura de grau Celsius para Farenheit ou vice-versa. Para cada opção, crie uma função. Crie uma terceira, que é um menu para o usuário escolher a opção desejada, onde esse menu chama a função de conversão correta.*/
 
+     function main(){
 
-        //1) perguntar para o usuario se quer converter de grau celsius p/ farenheit ou vice e versa
+        let num = parseInt(document.getElementById("num").value)
+        let resp = document.getElementById("resposta")
 
-        //2) Criar um função para cada ...
+        if(document.getElementById('CtoF').checked==true)
+          resp.innerHTML = ctof(num)
+        
+        if(document.getElementById('FtoC').checked==true)
+          resp.innerHTML = ftoc(num)
+
+     } function ctof(x){
+        return Math.round(((x * 1.8) + 32))  
+     }
+
+      function ftoc(x){
+        return Math.round(((x - 32)/ 1.8))
+      }
+
     </script>
-</head>
-<body>
-    
-</body>
+  </body>
 </html>
