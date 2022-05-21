@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste manipulando classes</title>
+
+  <style>
+    .estilo1{
+      border: 1px solid black;
+    }
+    
+    .estilo2{
+        width: 300px;
+        height: 280px;
+      
+        border-radius: 5px;
+        border: 1px solid #E5E5E5;
+
+        margin: auto;
+        text-align: justify;
+    }
+
+    .estiloCorpo1{
+      background-color: #039999;
+    }
+
+    .estiloCorpo2{
+      background-color: #9304DF;
+    }
+
+  </style>
+
+  <script>
+    function alterarClasse(){
+      document.getElementById('manipulado1').className = 'estilo2'
+      document.getElementById('manipulado2').className = 'estiloCorpo2'
+    }
+  </script>
+
+</head>
+<body class="estiloCorpo1" id="manipulado2">
+  <div class="estilo1" id="manipulado1">
+      <h2>Lorem ipsum dolor sit amet consectetur</h2>
+
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum voluptas sint iusto quisquam. Expedita impedit, ipsam ad quo quis ratione repudiandae rerum, numquam dolore aperiam eum iusto temporibus est eius</p>
+  </div>
+
+
+  <button type="button" onclick="alterarClasse()">Alterar a Classe</button>
+</body>
+</html>

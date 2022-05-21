@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste manipulando input text</title>
+
+  <script>
+    //Rceber uma temperatura, se essa temperatura for de 0 a 20 acresentar no campo 'Frio', se for maior que essas temperatura acresentar no campo Calor
+    
+    function definirTipoTempo(){
+      let temperatura = parseInt(document.getElementById('entrada').value)
+
+      document.getElementById('entrada').value = ''
+
+      console.log(temperatura)
+      if(temperatura >= 0 && temperatura <= 20){
+          document.getElementById('apenas_frio').value = temperatura
+
+      } else{
+        document.getElementById('apenas_calor').value = temperatura
+      }
+    }
+  </script>
+</head>
+<body>
+  <input type="number" id="entrada" placeholder="Digite uma Temperatura"><br>
+  <button onclick="definirTipoTempo()">Enviar</button>
+
+  <hr/>
+  <span>Frio:</span>
+  <input type="number" disabled id="apenas_frio">
+
+  <span>Calor:</span>
+  <input type="number" disabled id="apenas_calor">
+</body>
+</html>

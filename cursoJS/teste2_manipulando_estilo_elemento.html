@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste 2 manipulando estilo de elemento</title>
+
+  <script>
+    //alterar personagem quando clico no botao
+    function mudarPersonagem(heroi,tipoHeroi){
+
+      let personagem = tipoHeroi
+      
+      switch(heroi){
+        case 'hulk':
+          document.getElementById('quadrado').style.backgroundImage = "url('hulk.png')"
+          document.getElementById('texto-personagem').value = personagem
+          break;
+
+        case 'thor':
+          document.getElementById('quadrado').style.backgroundImage = "url('thor.png')"
+          document.getElementById('texto-personagem').value = personagem
+          break;
+
+        case 'homemDeFerro':
+          document.getElementById('quadrado').style.backgroundImage = "url('homem-de-ferro.png')"
+          document.getElementById('texto-personagem').value = personagem
+
+          break;
+      }
+    }
+  </script>
+</head>
+<body>
+    <h2>Teste 2 manipulando estilo de elemento</h2>
+
+    <button type="button" onclick="mudarPersonagem('hulk','Hulk')">Hulk</button>
+    <button type="button" onclick="mudarPersonagem('thor', 'Thor')">Thor</button>
+    <button type="button" onclick="mudarPersonagem('homemDeFerro', 'Homem de Ferro')">Homen de Ferro</button>
+
+    <hr/>
+
+    <div style="border: 1px solid black; width: 550px; height: 650px; background-repeat: no-repeat;" id="quadrado"><input type="text" disabled id="texto-personagem"></div>
+
+</html>

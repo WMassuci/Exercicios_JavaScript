@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando input text 2</title>
+
+  <script>
+      //receber uma letra, se for vogal vai cair no input vogal, caso for consoante cair no input consoante, aglomerar cada vez que digitar
+
+      function tipoDeLetra(){
+
+        let letra = document.getElementById('entrada').value
+
+        document.getElementById('entrada').value = ''
+        letra.trim()
+
+        switch(letra){
+          case "a":
+          case "e":
+          case "i":
+          case "o":
+          case "u":
+            document.getElementById('apenas_vogal').value += letra
+            break;
+          default:
+            document.getElementById('apenas_consoante').value += letra
+        }
+      }
+  </script>
+</head>
+<body>
+  <input type="text" id="entrada" placeholder="Digite uma letra" onkeyup="tipoDeLetra()">
+  <hr/>
+
+  <span>Vogal:</span>
+  <input type="text" disabled id="apenas_vogal">
+
+  <span>Consoante:</span>
+  <input type="text" disabled id="apenas_consoante">
+</body>
+</html>

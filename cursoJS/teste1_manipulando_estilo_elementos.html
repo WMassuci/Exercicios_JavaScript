@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando estilos Elementos 1</title>
+
+  <script>
+    function manipulandoElemento(corDeFundo,l,a){
+      document.getElementById('quadrado').style.backgroundColor = corDeFundo
+      document.getElementById('quadrado').style.width = l
+      document.getElementById('quadrado').style.height = a
+    }
+  </script>
+</head>
+<body>
+    <h2>Manipulando cor, altura e largura dos elementos</h2>
+
+    <button type="button" onclick="manipulandoElemento('#F2C304','200px', '200px')">Amarelo</button>
+    <button type="button" onclick="manipulandoElemento('#A906E2','300px','300px')">Roxo</button>
+    <button type="button" onclick="manipulandoElemento('#8B4513','400px','400px')">Marrom</button>
+    <button type="button" onclick="manipulandoElemento('#FF8F00','500px','500px')">Laranja</button>
+    <button type="button" onclick="manipulandoElemento('#05AFEF','600px','600px')">Azul</button>
+
+    <hr/>
+
+    <div style="border: 1px solid black; width: 100px; height: 100px" id="quadrado"></div>
+</body>
+</html>

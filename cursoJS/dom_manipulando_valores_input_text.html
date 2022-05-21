@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manipulando valores tipo text!</title>
+
+
+  <script>
+      function manipularInput(){
+
+        //receber o valor
+        let receber = document.getElementById('entrada').value
+
+        //limpar o campo input
+        document.getElementById('entrada').value = ''
+
+        //nao deixar espaço no campo input
+       receber.trim()
+
+        switch(receber){
+          case "0":
+          case "1":
+          case "2":
+          case "3":
+          case "4":
+          case "5":
+          case "6":
+          case "7":
+          case "8":
+          case "9":
+             //adicionar no campo numero
+             document.getElementById('apenas_numero').value = receber
+             break;
+            default:
+             document.getElementById('apenas_letra').value = receber
+        }
+        
+         
+        }
+      
+  </script>
+
+</head>
+<body>
+    <input type="text" id="entrada" placeholder="Digite aqui" onkeyup="manipularInput()">
+    <hr/>
+
+    <span>Letra:</span>
+    <input type="text" disabled id="apenas_letra">
+
+    <span>Numero:</span>
+    <input type="text" disabled id="apenas_numero">
+</body>
+</html>
