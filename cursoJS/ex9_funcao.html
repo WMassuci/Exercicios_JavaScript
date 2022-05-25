@@ -11,6 +11,21 @@
   <script>
    // Faça um programa, com uma função que necessite de um argumento. A função retorna o valor de caractere ‘P’, se seu argumento for positivo, e ‘N’, se seu argumento for zero ou negativo.
 
+   function verificarValor(){
+
+    let num = document.getElementById('valor').value 
+
+    if(num > 0){
+        document.write('P')
+    }else{
+      document.write('N')
+    }
+
+   }
+    
   </script>
+
+  <input type="number" id="valor"> <button type="button" onclick="verificarValor()">Enviar</button>
+
 </body>
 </html>

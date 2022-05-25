@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 11 Funções JS</title>
+</head>
+<body>
+  <script>
+   /* Faça um programa que converta da notação de 24 horas para a notação de 12 horas. Por exemplo, o programa deve converter 14:25 em 2:25 P.M. A entrada é dada em dois inteiros. Deve haver pelo menos duas funções: uma para fazer a conversão e uma para a saída. Registre a informação A.M./P.M. como um valor ‘A’ para A.M. e ‘P’ para P.M. Assim, a função para efetuar as conversões terá um parâmetro formal para registrar se é A.M. ou P.M. Inclua um loop que permita que o usuário repita esse cálculo para novos valores de entrada todas as vezes que desejar.*/
+
+    // javascript program to convert time from 24 hour
+// to 12 hour format
+    
+// Convert Function which takes in
+// 24hour time and convert it to
+// 12 hour format
+  function convert12(str)
+    {
+ 
+      // Get Hours
+    var h1 = Number(str[0]);
+    var h2 = Number(str[1]);
+      
+    var hh = h1 * 10 + h2;
+      
+      // Finding out the Meridien of time
+      // ie. AM or PM   
+      var Meridien;
+      
+      if (hh < 12) {
+          Meridien = "AM";
+      }
+      else
+          Meridien = "PM";
+      
+      hh %= 12;
+      
+      // Handle 00 and 12 case separately
+      if (hh == 0) {
+          document.write("12");
+      
+          // Printing minutes and seconds
+          for (var i = 2; i < 8; ++i) {
+          document.write(str[i]);
+          }
+      }
+      else {
+          document.write(hh);
+          // Printing minutes and seconds
+          for (var i = 2; i < 8; ++i) {
+          document.write(str[i]);
+          }
+      }
+      
+      // After time is printed
+      // cout Meridien
+     
+    document.write(" "+Meridien);
+  }
+    
+// Driver code
+    
+// 24 hour format
+    var str = "00:40:19";
+    convert12(str);
+     
+    // This code is contributed by bunnyram19.
+  </script>
+</body>
+</html>
