@@ -9,6 +9,17 @@
 <body>
   <script>
     /*Faça uma função que informe a quantidade de dígitos de um determinado número inteiro informado.*/
+
+    function verificarQuantidadeNumero(){
+      let numero = document.getElementById('valor').value 
+
+      document.write('Quantidade de numero: ' +numero.length)
+    }
   </script>
+
+
+  Informe qualque número: <input type="number" id="valor"><br/>
+  <button onclick="verificarQuantidadeNumero()">Enviar</button>
+
 </body>
 </html>
