@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 4 Array JS</title>
+</head>
+<body>
+  <script>
+    /*Refaça o script anterior, mas agora pergunte ao usuário quantos números ele deseja inserir no array.
+    Depois, o usuário vai preenchendo elemento por elemento do vetor.
+    Ao final, exiba o array e o array ao contrário (generalização do script anterior).*/ 
+
+    //perguntar ao usuario quantos numeros ele deseja inserir
+    //o usuario vai preenchendo elemento por elemento
+    //exibir o array que ele fez
+    //depois exibir o array em ordem ao contrario
+
+    function ordenarValores(){
+      let cont = document.getElementById('quantidade').value 
+      let lista_numeros = Array()
+
+      for(let i = 0; i < cont; i++){
+        lista_numeros.push(parseInt(prompt('Digite o valor: ')))
+      }
+      
+      alert('Sua Sequencia de números ' +lista_numeros)
+
+      //invertendo ordem
+      alert('Invertendo ' +lista_numeros.reverse())
+
+    }
+  </script>
+
+  Quantos numero deseja inserir? <input type="text" id="quantidade"><br/>
+  <button onclick="ordenarValores()">Enviar</button>
+</body>
+</html>

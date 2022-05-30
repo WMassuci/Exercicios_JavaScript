@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 3 Funções JS</title>
+</head>
+<body>
+  <script>
+    /*Crie um script que pergunte 3 números ao usuário, coloque em um array, depois exiba tal array.
+    Modifique os elementos do array de modo a a sequência de números ficar do contrário.
+    Ou seja, se digitou: 1,2,3
+    Vai aparecer: 3,2,1*/ 
+
+    //pedir 3 numeros ao usuario
+    //colocar eles em um array
+    //exibir esse array
+    //e depois exibir de modo decrescente
+
+    function ordenarValores(){
+      let num1 = document.getElementById('valor1').value 
+      let num2 = document.getElementById('valor2').value 
+      let num3 = document.getElementById('valor3').value 
+
+      let lista_numeros = [num1,num2,num3]
+
+      alert('Seus numeros digitados: ' +lista_numeros)
+
+      alert('Ordem invertida: ' +lista_numeros.reverse())
+    }
+  </script>
+
+  Informe o primeiro valor: <input type="number" id="valor1"><br/>
+  Informe o segundo valor: <input type="number" id="valor2"><br/>
+  Informe o terceiro valor: <input type="number" id="valor3"><br/>
+
+  <button type="button" onclick="ordenarValores()">Enviar</button>
+</body>
+</html>

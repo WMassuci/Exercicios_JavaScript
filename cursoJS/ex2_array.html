@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 2 Array JS</title>
+</head>
+<body>
+  <script>
+    /*Crie uma função que recebe um array de 3 números e coloque eles em ordem crescente. Crie sua própria função para isso.*/ 
+
+   function ordenarValores(a,b,c){
+     let lista_numeros = [a,b,c]
+
+     lista_numeros.sort(arrumarValores)
+
+     console.log(lista_numeros)
+     
+     function arrumarValores(a,b,c){
+       return a - b
+       return a - c
+     }
+   }
+  
+
+    let valor1 = parseFloat(prompt('Informe o primeiro valor: '))
+    let valor2 = parseFloat(prompt('Informe o segundo valor: '))
+    let valor3 = parseFloat(prompt('informe o terceiro valor: '))
+
+    ordenarValores(valor1,valor2,valor3)
+  </script>
+</body>
+</html>
