@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 8 Array JS</title>
+</head>
+<body>
+    <script>
+        /*Faça o mesmo do exercício anterior, mas com fatorial.
+        Fatorial de 0: 0! = '
+        Fatorial de 1: 1 x elemento0 = 1
+        Fatorial de 2: 2 x elemento1 = 2
+        Fatorial de 3: 3 x elemento2 = 3 x 2 = 6*/ 
+
+
+        function fatorialNumero(){
+          let atual = 1
+          let proximo = 1
+          let anterior = 0
+          let lista_numero = []
+
+          let quant_num = document.getElementById('numero').value 
+
+          for(let i = 1; i <= quant_num; i++){
+            console.log(proximo)
+            proximo = atual + anterior
+            anterior = atual
+            atual = proximo
+
+            lista_numero.push(proximo)
+          }
+
+          document.write(lista_numero+ '<br/>')
+
+          let soma = 0
+
+          for(let i = 0; i < lista_numero.length; i++){
+            soma += lista_numero[i]
+          }
+
+
+          /** Fazendo o fatorial do array */
+          let resultado = 1
+
+          for(let i = soma; i > 1; i--){
+            resultado *= i
+          }
+          
+          document.write('O Fatorial de ' +soma+ ' é ' +resultado)
+        }
+    </script>
+
+    Informe um valor inteiro positivo: <input type="number" id="numero"><br/>
+    <button type="button" onclick="fatorialNumero()">Enviar</button>
+</body>
+</html>

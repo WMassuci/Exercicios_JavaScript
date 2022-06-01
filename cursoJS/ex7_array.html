@@ -11,7 +11,37 @@
    /* Crie um script que pede um inteiro positivo para o usuário. Em seguida, popule uma array com os números de Fibonacci, na hora de somar com os termos anteriores, some com elementos anteriores do array.*/ 
 
    //pedir um numero inteiro positivo para o usuario
+    
+  function fibonacci(){
+    let atual = 1
+    let proximo = 1
+    let anterior = 0
+    let lista_numero = []
+
+    let quant_num = document.getElementById('numero').value 
+
+    for(let contador = 1; contador <= quant_num; contador++){
+      console.log(proximo)
+      proximo = atual + anterior
+      anterior = atual
+      atual = proximo
+
+      lista_numero.push(proximo)
+    }
+
+    let soma = 0
+
+    for(let i = 0; i < lista_numero.length; i++){
+      soma += lista_numero[i]
+    }
+
+    document.write(soma)
+  }
+    
    
   </script>
+
+  Informe a quantidade de numero desejado: <input type="number" id="numero"><br/>
+  <button type="button" onclick="fibonacci()">Enviar</button>
 </body>
 </html>
