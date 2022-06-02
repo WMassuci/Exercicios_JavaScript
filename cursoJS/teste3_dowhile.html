@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>teste 3 do while js</title>
+</head>
+<body>
+  <script>
+    //pedir o usuario o preço do produto e o desconto, fazer o calculo, so vai parar de pedir quando o usuario dizer
+
+    let continuar = ''
+    let preco = 0
+    let desconto = 0
+    let novo_preco = 0
+
+    do{
+  
+      preco = parseFloat(prompt('Informe o preço do produto: '))
+      desconto = parseFloat(prompt('Informe o valor do desconto: '))
+
+      novo_preco = preco - (preco * 5)/100
+
+      alert('Valor final do produto com desconto: ' +novo_preco)
+
+      continuar = prompt('Deseja continuar ? ')
+
+    }while(continuar == 'sim')
+  </script>
+</body>
+</html>

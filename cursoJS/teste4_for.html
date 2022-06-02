@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste 4 for js</title>
+</head>
+<body>
+  <script>
+    /*Faça um script que pede duas notas de um aluno. Em seguida ele deve calcular a média do aluno e dar o seguinte resultado:   (ultilizando for)
+
+    A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+    A mensagem "Reprovado", se a média for menor do que sete;
+    A mensagem "Aprovado com Distinção", se a média for igual a dez*/ 
+
+    //solicitar quantidade de alunos que vai calcular notas
+    //pedir duas notas do aluno
+    //calcular a media final
+    //mostrar A mensagem "Aprovado", se a média alcançada for maior ou igual a sete;
+    //A mensagem "Reprovado", se a média for menor do que sete;
+    //A mensagem "Aprovado com Distinção", se a média for igual a dez
+
+
+
+    let quant_aluno = prompt('Informe a quantidade de alunos, para calcular suas notas: ')
+    let nota1 = 0
+    let nota2 = 0
+    let media = 0
+
+    for(let cont = 1; cont <= quant_aluno; cont++){
+      alert('ALUNO ' +cont)
+
+      nota1 = parseFloat(prompt('Informe a primeira nota do aluno: '))
+      nota2 = parseFloat(prompt('Informe a segunda nota do aluno: '))
+
+      media = (nota1 + nota2 )/2
+
+      if(media >= 7 && media <= 9){
+        alert('O Aluno ' +cont+ ' foi APROVADO!')
+
+      }else if(media < 7){
+        alert('O Aluno ' +cont+ ' foi REPROVADO!')
+
+      }else if(media == 10){
+        alert('O Aluno ' +cont+ ' foi APROVADO COM DISTINÇÃO!')
+      }
+    }
+  </script>
+</body>
+</html>

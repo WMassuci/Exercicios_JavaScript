@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste 2 do while js</title>
+</head>
+<body>
+  <script>
+    //Pedir um numero para o usuario, e multiplica-lo até n numero que o usuario pedir
+
+    //pedir numero ao usuario
+    //pedir ate qual numero deseja multiplicar
+    //realizar um função para efeituar o calculo
+    //acresentar o laço de repeticao do while
+
+    function calcularMultiplicacao(){
+      let num1 = document.getElementById('valor1').value 
+      let num2 = document.getElementById('valor2').value 
+      let cont = 0
+
+      do{
+        cont++
+        document.write(num1+ ' X ' +cont+ ' = ' +num1 * cont+ ' <br/> ')
+      }while(cont < num2)
+    }
+
+  </script>
+
+  Informe qual numero que sera multiplicado: <input type="number" id="valor1"><br/>
+  Ate qual numero sera multiplicado? <input type="number" id="valor2"><br/>
+  <button type="button" onclick="calcularMultiplicacao()">Calcular</button>
+</body>
+</html>

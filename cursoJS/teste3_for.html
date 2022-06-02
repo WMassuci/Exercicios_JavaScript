@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste 3 for js</title>
+</head>
+<body>
+    <script>
+      //pedir o usuario o preço do produto e o desconto, fazer o calculo, so vai parar de pedir quando o usuario dizer
+      let preco = 0
+      let desconto = 0
+      let novo_preco = 0
+
+      let quant_produto = prompt('Informe quantos produtos irá ser calculado: ')
+
+      for(let cont = 1; cont <= quant_produto; cont++){
+        alert('PRODUTO ' +cont)
+        preco = parseFloat(prompt('Informe o preco do produto: '))
+        desconto = parseInt(prompt("Informe o valor de desconto: "))
+
+        novo_preco = preco - (preco * desconto)/100
+
+        alert('Valor final do produto ' +cont+ ' com desconto: ' +novo_preco)
+      }
+    </script>
+</body>
+</html>

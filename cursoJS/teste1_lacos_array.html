@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Percorrendo array com laços js</title>
+</head>
+<body>
+    <script>
+      //preencher um array com valores vindo do usuario , depois imprimi-los    
+
+      function criandoLista(){
+
+        let nome1 = document.getElementById('dado1').value 
+        let nome2 = document.getElementById('dado2').value 
+        let nome3 = document.getElementById('dado3').value 
+
+        let lista_nomes = Array()
+
+        document.getElementById('dado1').value = ''
+        document.getElementById('dado2').value = ''
+        document.getElementById('dado3').value = ''
+
+        lista_nomes.push(nome1)
+        lista_nomes.push(nome2)
+        lista_nomes.push(nome3)
+
+        let cont = 0
+
+        while(cont < lista_nomes.length){
+          document.write(lista_nomes[cont] + '<br/>')
+          cont++
+        }
+      }
+    </script>
+    
+    <p>Informe alguns dados abaixo para o array:</p>
+    <input type="text" id="dado1"><br/>
+    <input type="text" id="dado2"><br/>
+    <input type="text" id="dado3"><br/>
+    <button type="button" onclick="criandoLista()">Enviar</button>
+</body>
+</html>
