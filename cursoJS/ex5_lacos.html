@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 5 Laços JS</title>
+</head>
+<body>
+  <script>
+    /*Altere o programa anterior permitindo ao usuário informar as populações e as taxas de crescimento iniciais. Valide a entrada e permita repetir a operação.*/ 
+
+    let populacao_a = parseFloat(prompt('Informe a quantidade de população A: '))
+    let populacao_b = parseFloat(prompt('Informe a quantidade da população B: '))
+
+    let taxa_a = parseFloat(prompt("Informe a taxa de crescimento da primeira população: "))
+    let taxa_b = parseFloat(prompt('Informe a taxa de crescimento da segunda população: '))
+
+    let taxa_crescimento_a = (taxa_a / 100)+1
+    let taxa_crescimento_b = (taxa_b / 100)+1
+    let ano = 0
+
+      while(populacao_a < populacao_b){
+
+        let populacao_a = parseFloat(prompt('Informe a quantidade de população A: '))
+        let populacao_b = parseFloat(prompt('Informe a quantidade da população B: '))
+
+        let taxa_a = parseFloat(prompt("Informe a taxa de crescimento da primeira população: "))
+        let taxa_b = parseFloat(prompt('Informe a taxa de crescimento da segunda população: '))
+
+        let taxa_crescimento_a = (taxa_a / 100)+1
+        let taxa_crescimento_b = (taxa_b / 100)+1
+        let ano = 0
+
+
+
+        document.write('Ano: ' +ano+ '<br/>')
+        document.write('População A: ' +populacao_a+ '<br/>')
+        document.write('População B: ' +populacao_b+ '<br/>')
+        document.write('<hr/>')
+
+        ano += 1
+        populacao_a *= taxa_crescimento_a
+        populacao_b *= taxa_crescimento_b
+      }
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercicio 10 laços js</title>
+</head>
+<body>
+  <script>
+    //Faça um programa que receba dois números inteiros e gere os números inteiros que estão no intervalo compreendido por eles.
+
+    /*let num1 = parseInt(prompt('Informe o primeiro numero: '))
+    let num2 = parseInt(prompt('informe o segundo numero: '))
+
+   for(let n = num1 + 1; n < num2; n++){
+     document.write(n+ ' ')
+   }*/ 
+
+
+   //agora somando eles
+
+   let num1 = parseInt(prompt('Informe o primeiro numero: '))
+   let num2 = parseInt(prompt('Informe o segundo numero: '))
+   let soma = 0
+
+   for(let n = num1 + 1; n < num2; n++){
+      soma += n
+   }
+
+   document.write('Soma total: ' +soma)
+  </script>
+</body>
+</html>

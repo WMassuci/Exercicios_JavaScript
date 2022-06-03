@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foreach JS</title>
+</head>
+<body>
+    <script>
+      
+        //let listaFuncionarios = ['Viviane', 'Walter', 'Gabriel', 'Lucas', 'Augusto']
+        let listaFuncionarios = Array()
+        listaFuncionarios['x'] = 'Viviane'
+        listaFuncionarios[false] = 'Walter'
+        listaFuncionarios[3] = 'Gabriel'
+        listaFuncionarios[-12] = 'Lucas'
+
+        let f = function(valor, indice){
+          console.log(valor, indice)
+        }
+
+        listaFuncionarios.forEach(f)
+
+
+        /*
+        console.log(listaFuncionarios)
+        document.write(listaFuncionarios[2])
+
+        listaFuncionarios.forEach(function(valor,indice,array){
+          //logica
+          console.log('indice: '+indice+ ' Valor: ' +valor)
+
+          if(valor == 'Gabriel'){
+            array[indice] = 'Um Novo valor' //substituindo o valor gabriel, pegando do indice para 'um novo valor'
+          }
+
+          
+        })
+      
+        document.write(listaFuncionarios[2])
+        console.log(listaFuncionarios)*/ 
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 12 js laços</title>
+</head>
+<body>
+  <script>
+    //Desenvolva um gerador de tabuada, capaz de gerar a tabuada de qualquer número inteiro entre 1 a 10. O usuário deve informar de qual numero ele deseja ver a tabuada. A saída deve ser conforme o exemplo abaixo:
+
+    let tabuada = parseInt(prompt('Qual numero deseja ver a tabuada? '))
+
+    document.write('Tabuada de ' +tabuada+ ': <br/>')
+    for(let n = 1; n <= 10; n++){
+      document.write(tabuada+ ' X ' +n+ ' = ' +(tabuada*n)+ '<br/>')
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste 1 foreach JS</title>
+</head>
+<body>
+  <script>
+    let lista_carros = ['Celta', 'Ferrari', 'Nissan 350z', 'Fiat 500', 'Golf']
+    //percorrer todo o array e imprimi-lo
+    /*let lista_carros = ['Celta', 'Ferrari', 'Nissan 350z', 'Fiat 500', 'Golf']
+
+    lista_carros.forEach(function(valor, indice, array){
+      document.write('Indice: ' +indice+ ' | Valor: ' +valor+ '<br/>')
+    })*/ 
+
+
+    //substituir o valor no indice 3 e 4 
+    /*lista_carros.forEach(function(valor, indice, array){
+
+      if(valor == 'Golf'){
+        array[indice] = 'lamborghini'
+
+      }else if(valor == 'Fiat 500'){
+        array[indice] == 'Siena'
+      }
+    })
+
+    document.write(lista_carros)*/ 
+
+
+    //usar a função callback fora do foreach
+    
+    /*let f = function(valor,indice,array){
+      document.write('Indice: ' +indice+ ' | Valor: ' +valor+ '<br/>')
+    }
+
+    lista_carros.forEach(f)*/ 
+
+
+    let f = function(valor,indice,array){
+      if(valor == 'Fiat 500'){
+        array[indice] = 'Onix'
+
+      }else if(valor == 'Golf'){
+        array[indice] = 'Fusca'
+      }
+    }
+
+
+    lista_carros.forEach(f)
+    console.log(lista_carros)
+  </script>
+</body>
+</html>
