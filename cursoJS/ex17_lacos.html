@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercicio 17 laços js</title>
+</head>
+<body>
+  <script>
+    //Faça um programa que calcule o fatorial de um número inteiro fornecido pelo usuário. Ex.: 5!=5.4.3.2.1=120
+
+    let numero = parseInt(prompt("Informe um numero para Fatorial: "))
+    let resultado = 1
+
+    for(let cont = 1; cont <= numero; cont++){
+      resultado *= cont
+    }
+
+    document.write('O Fatorial de ' +numero+ ' é ' +resultado)
+  </script>
+</body>
+</html>

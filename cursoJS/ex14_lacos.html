@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ex 14 laços JS</title>
+</head>
+<body>
+  <script>
+    //Faça um programa que peça 10 números inteiros, calcule e mostre a quantidade de números pares e a quantidade de números ímpares.
+
+    //pedir 10 números inteiros
+    //calcular
+    //mostre a quantidade de números pares
+    //mostre a quantidade de números ímpares
+
+    let num = 0
+    let pares = 0
+    let impar = 0
+
+    for(let n = 1; n <= 10; n++){
+      num = parseInt(prompt("Informe um numero: "))
+
+      if(num % 2 == 0){
+       pares += 1
+      }
+
+      if(num % 2 == 1){
+        impar += 1
+      }
+    }
+
+    document.write('Quantidade de Numeros Pares: ' +pares+ '<br/>')
+    document.write('Quantidade de Numeros Impares: ' +impar)
+  </script>
+</body>
+</html>

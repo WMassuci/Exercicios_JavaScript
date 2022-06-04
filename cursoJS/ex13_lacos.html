@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 13 Laços JS</title>
+</head>
+<body>
+  <script>
+
+    //Faça um programa que peça dois números, base e expoente, calcule e mostre o primeiro número elevado ao segundo número. Não utilize a função de potência da linguagem. 
+
+
+    let base = parseInt(prompt("Informe um numero para ser a base: "))
+    let expoente = parseInt(prompt('Informe um numero para ser o expoente: '))
+    let resultado = 1
+
+
+    for(let n = 0; n < expoente; n++){
+      resultado *= base
+    }
+
+    alert('A potencia de ' +base+'^'+expoente+ ' = ' +resultado)
+  </script>
+</body>
+</html>

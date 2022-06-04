@@ -9,7 +9,7 @@
 
     <script>
 
-        // chamando a função
+       /* // chamando a função
 
         var largura = prompt('Informe a Largura ')
         var comprimento = prompt('Informe o comprimento ')
@@ -21,13 +21,24 @@
         //posso declarar funçoes no final dos scripts
 
         function calcularAreaTerreno(largura, comprimento) {
-
             //logica
-
             var area = largura * comprimento
             return area
+        }*/ 
 
+        let resultado = 0
+
+        function soma(){
+            console.log(arguments)
+
+            for(let i in arguments){
+                resultado += arguments[i]
+            }
+
+            return resultado
         }
+
+        console.log(soma(3,7,3.5))
 
     </script>
 </head>
