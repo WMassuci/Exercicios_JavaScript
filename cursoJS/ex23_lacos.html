@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 23 Laços</title>
+</head>
+<body>
+  <script>
+    /*Faça um programa que mostre todos os primos entre 1 e N sendo N um número inteiro fornecido pelo usuário. O programa deverá mostrar também o número de divisões que ele executou para encontrar os números primos. Serão avaliados o funcionamento, o estilo e o número de testes (divisões) executados.*/ 
+
+    //mostrar todos os numeros primos de 1 a n 
+    //fornecidos pelo usuario
+    //exibir tambem o numero de divisões que foram executados
+
+    function verificarNumeroPrimo(){
+      let num = document.getElementById('valor').value 
+      let i = 0
+      let soma
+
+      for(let numero = 2; numero <= num; numero++){
+        let ehPrimo = true
+
+        for(let divisor = 2; divisor < numero; divisor++){
+          if(numero % divisor === 0){
+            ehPrimo = false
+          }
+        }
+  
+        if(ehPrimo){
+          document.write(numero +'<br/>')
+        }
+
+        soma = i += 1   
+      }
+
+      document.write('O Programa realizou ' +soma+ ' divisões')
+    }
+    
+  </script>
+
+  Informe um valor: <input type="number" id="valor"><br/>
+  <button onclick="verificarNumeroPrimo()">Enviar</button>
+</body>
+</html>

@@ -8,20 +8,19 @@
 </head>
 <body>
   <script>
+    let janela 
 
-    let janela
-
-    function abrirPopUp(){
-      janela = window.open('https://www.w3schools.com', 'nova_janela', 'width=20 heigth=20')
+    function abrirJanela(){
+      janela = window.open('https://www.w3schools.com/', 'W3 Schools', 'width=20 heigth=20')
     }
 
-    function fecharPopUp(){
+    function fecharJanela(){
       janela.close()
     }
   </script>
 
-  <button onclick="abrirPopUp()">Abrir Janela</button>
-  <button onclick="fecharPopUp()">Fechar Janela</button>
-  <button onclick="window.print()">Imprimir Página</button>
+  <button onclick="abrirJanela()">Abrir Janela</button>
+  <button onclick="fecharJanela()">Fechar Janela</button>
+  <button onclick="window.print()">Imprimir tela</button>
 </body>
 </html>

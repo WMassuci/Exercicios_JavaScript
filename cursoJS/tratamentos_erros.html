@@ -10,37 +10,29 @@
   <script>
     //netflix
 
-    
+    throw new('codigo não pode ser processado!')
 
-    let video = Array()
-      
-      video[1] = Array()
-      video[1]['nome'] = 'Fullmate achmiste'
-      video[1]['categoria'] = 'Anime'
+    let lista_filmes = Array()
 
-      function getVideo(video){
-        
-        try {
-          //logica
-          //simulando um erro
-          console.log(video[0]['nome'])
+    lista_filmes[1] = []
+    lista_filmes[1]['nome'] = 'Os Vingadores'
+    lista_filmes[1]['categoria'] = 'Ação'
 
-        }
+   function watchMovies(lista_filmes){
+    try{
+       console.log(lista_filmes[0]['As Branquelas'])
+     }
 
-        catch(e){
-          console.log(e)
-          console.log("Agora sim podemos tratar esse erro!")
-          throw new Error('houve um erro mais não se preocupe estamos trabalhando nisso agora!')
-        }
-        
-        finally{
-          console.log('Sempre passa por aqui!')
-        }
-        
-        console.log('A aplicação nao morreu!')
-      }
+     catch(erro){
+       console.log('Erro ao procurar o filme!')
+     }
 
-      getVideo(video)
+     finally{
+       console.log('Erro finalizado')
+     }
+   }
+
+   watchMovies(lista_filmes)
   </script>
 </body>
 </html>

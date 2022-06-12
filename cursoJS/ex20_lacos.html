@@ -18,16 +18,17 @@
   let continuar = 'sim'
 
   while(continuar == 'sim'){
-    num = parseInt(prompt('Informe um numero de 1 ate 16: '))
 
-    if((num >= 1) && (num <= 16)){
+    num = parseInt(prompt('Informe um numero de 1 ate 16: '))
+    
+    fat = 1
+    if((num >= 1) || (num <= 16)){
       for(let cont = 1; cont <= num; cont++){
         fat *= cont
-      }
-      
+      }  
       alert('O Fatorial de ' +num+ ' é ' +fat)
 
-    }else{
+    } else{
       alert('Erro! voce digitou valor invalido!')
     }
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 22 laços js</title>
+</head>
+<body>
+  <script>
+    //Altere o programa de cálculo dos números primos, informando, caso o número não seja primo, por quais número ele é divisível.
+
+    function verificandoNumeroPrimo(){
+      let x = document.getElementById('numero').value
+      let lista_numero = []
+      let ehPrimo
+
+      for(let numero = 2; numero <= x; numero++){
+        ehPrimo = true
+
+        for(let divisor = 2; divisor < numero; divisor++){
+          if(numero % divisor === 0){
+            ehPrimo = false
+            lista_numero.push(numero)
+          }
+        }
+      }
+
+      if(ehPrimo){
+        document.write('O Numero ' +x+ ' é primo!')
+
+      }else{
+        document.write('O Numero ' +x+ ' não é primo! e seus divisiveis são: <br/>')
+        lista_numero.forEach(function(indice, valor, array){
+          document.write(valor+ ' ')
+        }      
+        );
+      }
+    }
+  </script>
+
+  Informe um numero: <input type="number" id="numero"><br/>
+  <button onclick="verificandoNumeroPrimo()">Verificar</button>
+
+</body>
+</html>

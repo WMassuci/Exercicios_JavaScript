@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 25 Laços</title>
+</head>
+<body>
+  <script>
+    /*Faça um programa que peça para n pessoas a sua idade, ao final o programa devera verificar se a média de idade da turma varia entre 0 e 25,26 e 60 e maior que 60; e então, dizer se a turma é jovem, adulta ou idosa, conforme a média calculada.*/ 
+
+    //pedir um n pessoas e idade
+    //calcular a media de idade
+    //se a media for entre 0 e 25 = turma jovem
+    //se a media for entre 26 e 60 = turma adulta
+    //se a media for entre +60 = turma idosa
+    
+    function verificarMediaIdade(){
+      let n_pessoas = parseInt(document.getElementById('numero_pessoas').value)
+      let idade = 0
+
+      let media = 0
+      let soma_idade = 0
+
+      for(let contador = 1; contador <= n_pessoas; contador++){
+        idade = parseInt(prompt('Digite a idade da ' +contador+ ' pessoa: '))
+
+        soma_idade += idade
+      }
+
+      media = soma_idade / n_pessoas
+      
+      if(media >= 0 && media <= 25){
+        document.getElementById('turma').innerHTML = 'Jovem'   
+
+      }else if(media >= 26 && media <= 60){
+        document.getElementById('turma').innerHTML = 'Adulta'
+
+      }else if(media > 60){
+        document.getElementById('turma').innerHTML = 'Idosa'
+      }
+    }
+
+  </script>
+
+  Informe a quantidade de pessoas: <input type="number" id="numero_pessoas"><br/>
+  <p>A Turma é: <span id="turma"></span></p>
+  <button type="button" onclick="verificarMediaIdade()">Enviar</button>
+</body>
+</html>

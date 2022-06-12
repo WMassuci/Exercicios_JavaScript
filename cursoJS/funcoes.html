@@ -26,19 +26,21 @@
             return area
         }*/ 
 
-        let resultado = 0
 
         function soma(){
             console.log(arguments)
 
             for(let i in arguments){
-                resultado += arguments[i]
+                if(arguments[i] == 'Wander'){
+                    arguments[i] = 'Walter'
+                }
             }
 
-            return resultado
-        }
+            console.log(arguments)
 
-        console.log(soma(3,7,3.5))
+        }
+        
+        console.log(soma('Lucas', 'Wander', 'Gabriel', 'Maria'))
 
     </script>
 </head>

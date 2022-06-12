@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 21 laços js</title>
+</head>
+<body>
+  <script>
+    //Faça um programa que peça um número inteiro e determine se ele é ou não um número primo. Um número primo é aquele que é divisível somente por ele mesmo e por 1.
+
+    function verificarNumeroPrimo(){
+      let x = document.getElementById('numero').value 
+      let ehPrimo
+
+      for(let numero = 2; numero <= x; numero++){
+        ehPrimo = true
+
+          for(let divisor = 2; divisor < numero; divisor++){
+            if(numero % divisor === 0){
+              ehPrimo = false
+            }
+          }
+      }
+
+      if(ehPrimo){
+        document.write('O Numero ' +x+ ' é primo!')
+
+      }else{
+        document.write('O Numero ' +x+ ' não é primo!')
+      }
+    }
+
+  </script>
+
+  <h2>Verificar se é numero primo!</h2>
+
+  Informe um numero: <input type="number" id="numero"><br/>
+  <button onclick="verificarNumeroPrimo()">Enviar</button>
+</body>
+</html>

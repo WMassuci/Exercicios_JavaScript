@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOM Timing</title>
+</head>
+<body>
+  <script>
+    
+    //setTimeout(function(){document.write('teste')}, 2000) //aqui a função vai ser executada aos 2000 milisegundos, a ação sera executada somente 1 vez
+
+  /*let i = 0
+  let x = setInterval(function(){
+    document.write(i+ '<br/>')
+    i++
+
+    if(i == 20){
+      clearInterval(x)
+      alert('Acabou o tempo!')
+    }
+  }, 300)*/ 
+
+    //vai para ate que a variavel x seja 0, por causa do clearInterval
+
+
+    //setInterval() a função vai ser executada a casa 2000 milisegundos, serao executadas varais vezes, para para e utlizada o clearInterval()
+
+
+    
+   /*const myInterval = setInterval(myTimer, 1000)
+
+   function myTimer(){
+     const date = new Date()
+     document.getElementById('demo').innerHTML = date.toLocaleTimeString()
+   }
+
+   function stopTimer(){
+     clearInterval(myInterval)
+   }*/ 
+
+  
+    setInterval(function(){
+      let x = new Date()
+      document.getElementById('demo').innerHTML = x.toLocaleTimeString()
+    }, 1000)
+
+  </script>
+
+  <p id="demo"></p>
+
+  <!--<button onclick="stopTimer()">Parar a Hora</button>
+  <button onclick="window.location.reload()">Continuar</button>-->
+</body>
+</html>
