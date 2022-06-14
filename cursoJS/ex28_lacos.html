@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 28 Laços JS</title>
+</head>
+<body>
+  <script>
+    /*Faça um programa que calcule o valor total investido por um colecionador em sua coleção de CDs e o valor médio gasto em cada um deles. O usuário deverá informar a quantidade de CDs e o valor para em cada um.*/ 
+
+    //pedir ao usuario a quantidade de cd's comprado
+    // e o valor de cada cd's
+    //informar no final o valor total de investimento 
+    // e o valor médio gasto em cada cd
+
+    function calculandoValorProduto(){
+      let quant_cd = document.getElementById('quant_cd').value
+      let valor_cd 
+      let soma_cd = 0
+      let media = 0
+
+      for(let contador = 1; contador <= quant_cd; contador++){
+        valor_cd = parseFloat(prompt('Informe o valor do CD ' +contador+ ' :'))
+        soma_cd += valor_cd
+      }
+
+      media = Math.round(soma_cd / quant_cd)
+
+      let formato1 = soma_cd.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+      let formato2 = media.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+      document.getElementById('valor_investimento').innerHTML = formato1
+      document.getElementById('valor_medio_gasto').innerHTML = formato2
+    }
+
+  </script>
+
+  <h3>Calculando o valor total de investimento no produto e seu valor médio gasto</h3>
+
+  Informe a quantidade de CD's comprados: <input type="number" id="quant_cd"><br/>
+  <button onclick="calculandoValorProduto()">Enviar</button>
+  <hr/>
+
+  <h4>Valor Total de Investimento: <span id="valor_investimento"></span></h4>
+  <h4>Valor médio gasto: <span id="valor_medio_gasto"></span></h4>
+</body>
+</html>

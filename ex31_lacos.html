@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercicio 31 laços js</title>
+</head>
+<body>
+  <script>
+    /*O Sr. Manoel Joaquim expandiu seus negócios para além dos negócios de 1,99 e agora possui uma loja de conveniências. Faça um programa que implemente uma caixa registradora rudimentar. O programa deverá receber um número desconhecido de valores referentes aos preços das mercadorias. Um valor zero deve ser informado pelo operador para indicar o final da compra. O programa deve então mostrar o total da compra e perguntar o valor em dinheiro que o cliente forneceu, para então calcular e mostrar o valor do troco. Após esta operação, o programa deverá voltar ao ponto inicial, para registrar a próxima compra. A saída deve ser conforme o exemplo abaixo:
+
+    Lojas Tabajara 
+    Produto 1: R$ 2.20
+    Produto 2: R$ 5.80
+    Produto 3: R$ 0
+    Total: R$ 9.00
+    Dinheiro: R$ 20.00
+    Troco: R$ 11.00*/ 
+
+
+    //os valores das mercadorias são aletaorios
+    //caso a compra finalize indicar o numero 0
+    //mostrar o total da compra
+    //perguntar o valor em dinheiro em que o cliente forneceu
+    //assim calcular e mostrar o troco
+    //apos tudo finalizado voltar ao ponto inicial para registrar outra compra
+
+    let dinheiro = 0
+    let soma_compra = 0
+    let finalizou = '1'
+
+    let tabela_produto = []
+
+    let cont = 1
+    
+    while(finalizou == '1'){
+      produto = parseFloat(prompt('Informe o preço do Produto ' +cont+ ' : '))
+      tabela_produto.push(produto)
+      finalizou = prompt('Acabou a compra? ')
+      cont++
+    }
+
+    //somando a compra
+    for(let contador = 0; contador < tabela_produto.length; contador++){
+      soma_compra += tabela_produto[contador]
+    }
+
+    dinheiro = parseFloat(prompt("Infor"))
+  </script>
+</body>
+</html>

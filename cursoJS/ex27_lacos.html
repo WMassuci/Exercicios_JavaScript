@@ -15,12 +15,33 @@
     //calcular a media de alunos por cada turma
     //OBS: As turmas não podem ter mais de 40 alunos
 
-    let quant_turma = parseInt(prompt('Informe a quantidade de turma'))
-    
-    for(let contador = 1; contador < quant_turma; contador++){
+    function mediaPorTurma(){
+
+      let quant_turma = parseInt(document.getElementById('n_turma').value) 
+      let quant_aluno
+      let media
       
+      for(let contador = 1; contador <= quant_turma; contador++){
+        quant_aluno = parseInt(prompt('Informe a quantidade de aluno da turma ' +contador+ ' : '))
+
+        if(quant_aluno > 40){
+          alert('A Turma não podem ter mais de 40 alunos!')
+
+        } else{
+          media = Math.round(quant_aluno / quant_turma)
+          alert( 'A Turma ' +contador+ ' tem a média de ' +media+ ' alunos')
+        }
+      }
+
     }
-    
+
   </script>
+
 </body>
+
+  <h3>Verificando a media de alunos por turmas</h3>
+
+  Informe a quantidade de turmas <input type="number" id="n_turma"><br/>
+
+  <button type="button" onclick="mediaPorTurma()">Verificar</button>
 </html>
