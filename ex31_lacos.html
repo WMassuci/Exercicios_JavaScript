@@ -26,6 +26,7 @@
     //assim calcular e mostrar o troco
     //apos tudo finalizado voltar ao ponto inicial para registrar outra compra
 
+    let troco = 0
     let dinheiro = 0
     let soma_compra = 0
     let finalizou = '1'
@@ -46,7 +47,20 @@
       soma_compra += tabela_produto[contador]
     }
 
-    dinheiro = parseFloat(prompt("Infor"))
+    dinheiro = parseFloat(prompt('Informe qual o valor o dinheiro que vai ser pago? '))
+    troco = dinheiro - soma_compra
+
+    document.write('<h2> Lojas Tabajara </h2>')
+    tabela_produto.forEach(function(valor, indice, array){
+      document.write('Produto ' +(indice + 1)+ ' : ' +valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})+ '<br/>')
+    });
+
+    document.write('<span> Total: ' +soma_compra.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})+  ' </span><br/>')
+    document.write('<span> Dinheiro: ' +dinheiro.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})+  ' </span><br/>')
+    document.write('<span> Troco: ' +troco.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})+  ' </span><br/>')
+
   </script>
+
+  <button type="button" onclick="window.location.reload('ex31_lacos.html')">Iniciar outra compra</button>
 </body>
 </html>

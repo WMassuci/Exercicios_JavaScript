@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 39 laços js</title>
+</head>
+<body>
+  <script>
+    /*Faça um programa que receba o valor de uma dívida e mostre uma tabela com os seguintes dados: valor da dívida, valor dos juros, quantidade de parcelas e valor da parcela.
+
+    Os juros e a quantidade de parcelas seguem a tabela abaixo:
+
+    Quantidade de Parcelas  % de Juros sobre o valor inicial da dívida
+    1       0
+    3       10
+    6       15
+    9       20
+    12      25
+
+
+    Exemplo de saída do programa:
+
+    Valor da Dívida Valor dos Juros Quantidade de Parcelas  Valor da Parcela
+    R$ 1.000,00     0               1                       R$  1.000,00
+    R$ 1.100,00     100             3                       R$    366,00
+    R$ 1.150,00     150             6                       R$    191,67*/ 
+
+
+    //mostrar o valor divida 
+    //mostrar o valor juros 
+    //5 vezes
+    
+    let taxa
+    let parcela
+    let valorjuros
+    let valorparc
+    
+    let divida = parseFloat(prompt("Informe o valor da divida: "))
+
+      while(divida != -1){
+        parcela = parseInt(prompt("Informe a quantidade de parcelas: "))
+
+        if(parcela == 1){
+          taxa = 0
+
+        }else if(parcela == 3){
+          taxa = 0.1
+
+        }else if(parcela == 6){
+          taxa = 0.15
+
+        }else{
+          taxa = 0.2
+        }
+
+        valorjuros = divida * taxa
+        valorparc = divida / parcela
+
+        document.write('Divida: ' +divida+ '<br/>')
+        document.write('Juros: ' +valorjuros+ '<br/>')
+        document.write('Quant Parcelas: ' +parcela+ '<br/>')
+        document.write('Valor da parcela: ' +valorparc.toFixed(2)+ '<br/>')
+        document.write("<hr/>")
+        
+        divida = parseFloat(prompt("Informe o valor da divida: "))
+      }
+  </script>
+</body>
+</html> 

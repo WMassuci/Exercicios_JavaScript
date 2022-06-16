@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicios laços 37 js</title>
+</head>
+<body>
+  <script>
+    /*Um funcionário de uma empresa recebe aumento salarial anualmente: Sabe-se que:
+    Esse funcionário foi contratado em 1995, com salário inicial de R$ 1.000,00;
+    Em 1996 recebeu aumento de 1,5% sobre seu salário inicial;
+    A partir de 1997 (inclusive), os aumentos salariais sempre correspondem ao dobro do percentual do ano anterior. Faça um programa que determine o salário atual desse funcionário.  Após concluir isto, altere o programa permitindo que o usuário digite o salário inicial do funcionário.*/ 
+
+    //determine o salário atual desse funcionário
+
+    let salario = parseFloat(prompt("Informe o salario do funcionario em 1995: "))
+    let ano = 1995
+    let ano_atual = parseInt(prompt('informe o ano em que estamos: '))
+    let aumento = 1.5 / 100
+
+   while(ano < ano_atual){
+      ano += 1
+      salario *= 1 + aumento
+      aumento *= 2
+   }
+
+    document.write('O Salario em ' +ano+ ' é de ' +salario)
+  </script>
+</body>
+</html>

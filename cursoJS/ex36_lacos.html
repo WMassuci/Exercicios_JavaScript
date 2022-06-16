@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 36 Laços JS</title>
+</head>
+<body>
+  <script>
+    /*Uma academia deseja fazer um senso entre seus clientes para descobrir o mais alto, o mais baixo, a mais gordo e o mais magro, para isto você deve fazer um programa que pergunte a cada um dos clientes da academia seu código, sua altura e seu peso. O final da digitação de dados deve ser dada quando o usuário digitar 0 (zero) no campo código. Ao encerrar o programa também deve ser informados os códigos e valores do clente mais alto, do mais baixo, do mais gordo e do mais magro, além da média das alturas e dos pesos dos clientes*/ 
+
+    //perguntar ao cliente seu codigo, altura e peso
+    //quando digitar 0 encerrou o programa
+    //quando encerrado informar os códigos e valores do clente mais alto, do mais baixo, do mais gordo e do mais magro
+    //alem de suas media das alturas e pesos
+    let codigo = 0
+    let altura = 0
+    let peso = 0
+  
+    let codigo_mais_gordo = 0
+    let codigo_mais_magro = 0
+    let codigo_mais_alto = 0
+    let codigo_mais_baixo = 0
+
+    let peso_mais_gordo = 0
+    let peso_mais_magro = 500
+    
+    let altura_mais_alto = 0
+    let altura_mais_baixo = 0
+
+    let soma_dos_pesos = 0
+    let soma_das_alturas = 0
+    let quantidade_de_clientes = 0
+    let media_das_alturas = 0
+    let media_dos_pesos = 0
+
+    
+    while(true){
+        codigo = prompt('Digite o codigo do cliente: ')
+
+        if(codigo == 0){
+          break
+        }
+
+        quantidade_de_clientes += 1
+        altura = parseFloat(prompt("Informe a altura do cliente: "))
+        peso = parseFloat(prompt("Informe o peso do cliente: "))
+
+        soma_dos_pesos += peso
+        soma_das_alturas += altura
+
+        if(altura > altura_mais_alto){
+          altura_mais_alto = altura
+          codigo_mais_alto = codigo
+        }
+
+        if(altura < altura_mais_alto){
+          altura_mais_baixo = altura
+          codigo_mais_baixo = codigo
+        }
+
+        if(peso > peso_mais_gordo){
+          peso_mais_gordo = peso
+          codigo_mais_gordo = codigo
+        }
+
+        if(peso < peso_mais_magro){
+          peso_mais_magro = peso
+          codigo_mais_magro = codigo
+        }
+
+     }
+
+     media_das_alturas = soma_das_alturas / quantidade_de_clientes
+     media_dos_pesos = soma_dos_pesos / quantidade_de_clientes
+
+     document.write('O Cliente mais alto é que tem o codigo ' +codigo_mais_alto+ ' e ele tem a altura de ' +altura_mais_alto+ '<br/>')
+
+     document.write('O Cliente mais baixo é que tem o codigo ' +codigo_mais_baixo+ ' e ele tem a altura de ' +altura_mais_baixo+ '<br/>')
+
+     document.write('<hr/>')
+
+     document.write('O Cliente mais gordo é que tem o codigo ' +codigo_mais_gordo+ ' e ele tem o peso de ' +peso_mais_gordo+ '<br/>')
+
+     document.write('O Cliente mais magro é que tem o codigo ' +codigo_mais_magro+ ' e ele tem o peso de ' +peso_mais_magro+ '<br/>')
+
+     document.write('<hr/>')
+
+     document.write('A Média das alturas: ' +media_das_alturas+ '<br/>')
+     document.write('A Média dos pesos: ' +media_dos_pesos+ '<br/>')
+  </script>
+</body>
+</html>

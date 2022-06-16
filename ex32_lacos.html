@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 32 Laços JS</title>
+</head>
+<body>
+  <script>
+    /*O Departamento Estadual de Meteorologia lhe contratou para desenvolver um programa que leia as um conjunto indeterminado de temperaturas, e informe ao final a menor e a maior temperaturas informadas, bem como a média das temperaturas.*/ 
+
+
+    //ler um conjunto indeterminado de temperatura
+    //informar no final a menor e a maior temperatura informadas
+    //assim tirando a média das temperaturas
+
+    let inserir = 'sim'
+    let maior = 0
+    let menor = 0
+    let media = 0
+    let cont = 1
+    let temp
+
+    while(inserir == 'sim'){
+      temp = parseFloat(prompt('Informe a ' +cont+ ' temperatura: '))
+
+      if(cont == 1){
+        maior = temp
+        menor = temp
+      }
+
+      if(temp > maior){
+        maior = temp
+      }
+
+      if(temp < menor){
+        menor = temp
+      }
+
+      inserir = prompt("Deseja inserir mais temperaturas?")
+      cont++
+    }
+
+
+    document.write('A Menor temperatura: ' +menor+ 'C <br/>')
+    document.write(' A Maior temperatura: ' +maior+ 'C <br/>')
+    document.write('A Média entre temperatura: ' +(maior + menor)/2+ 'C')
+  </script>
+
+  <h2>Informando a menor e a maior temperatura, e a média!</h2>
+</body>
+</html>

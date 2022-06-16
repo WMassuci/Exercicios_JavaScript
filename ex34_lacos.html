@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercicio 34 laços js</title>
+</head>
+<body>
+  <script>
+   /* Encontrar números primos é uma tarefa difícil. Faça um programa que gera uma lista dos números primos existentes entre 1 e um número inteiro informado pelo usuário.*/
+
+   //informar o numeros primo de 1 a n(numero que o usuario pedir)
+
+   function informandoNumerosPrimos(){
+    let num = document.getElementById('num').value 
+    let lista_primo = []
+
+    for(let numero = 2; numero <= num; numero++){
+      let ehPrimo = true
+
+      for(let divisor = 2; divisor < numero; divisor++){
+        if(numero % divisor == 0){
+          ehPrimo = false
+        }
+      }
+
+      if(ehPrimo){
+        lista_primo.push(numero)
+      }
+    }
+
+    lista_primo.forEach(function(valor, indice, array){
+      document.write(valor +'<br/>')
+    })
+   }
+
+  </script>
+
+  Informe um numero inteiro: <input type="number" id="num"><br/>
+  <button type="button" onclick="informandoNumerosPrimos()">Enviar</button>
+</body>
+</html>

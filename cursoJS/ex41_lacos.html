@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 41 laços js</title>
+</head>
+<body>
+  <script>
+    /*Em uma eleição presidencial existem quatro candidatos. Os votos são informados por meio de código. Os códigos utilizados são:
+
+    1 , 2, 3, 4  - Votos para os respectivos candidatos 
+    (você deve montar a tabela ex: 1 - Jose/ 2- João/etc)
+    5 - Voto Nulo
+    6 - Voto em Branco
+
+    Faça um programa que calcule e mostre:
+    O total de votos para cada candidato;
+    O total de votos nulos;
+    O total de votos em branco;
+    A percentagem de votos nulos sobre o total de votos;
+    A percentagem de votos em branco sobre o total de votos. Para finalizar o conjunto de votos tem-se o valor zero.*/
+
+    //4 candidos (inventar o nome)
+    //criar a tabelinha
+    //exibir O total de votos para cada candidato
+    //exibir O total de votos nulos
+    //exibir O total de votos em branco
+
+    //exibir A percentagem de votos nulos sobre o total de votos
+    //exibir A percentagem de votos em branco sobre o total de votos
+    //Para finalizar o conjunto de votos tem-se o valor zero
+
+    function verificandoVotos(){
+      let candidato_jose = 0
+      let candidato_marcio = 0
+      let candidato_andre = 0
+      let candidato_gabriel = 0
+
+      let votos_nulos = 0
+      let votos_brancos = 0
+
+      let total_votos = 0
+      let percentagem_nulos = 0
+      let percentagem_brancos = 0
+
+      let voto = 0
+      let encerrar_votacao = 1
+
+      while(encerrar_votacao == 1){
+        voto = prompt('Informe o Numero em que quer votar: ')
+        total_votos += 1
+
+        if(voto == '1'){
+          candidato_jose += 1
+        }
+
+        else if(voto == '2'){
+          candidato_marcio += 1
+        }
+
+        else if(voto == '3'){
+          candidato_andre += 1
+        }
+
+        else if(voto == '4'){
+          candidato_gabriel += 1
+        }
+
+        else if(voto == '5'){
+          votos_nulos += 1
+        }
+
+        else if(voto == '6'){
+          votos_brancos += 1
+        }
+
+        document.getElementById('votos_jose').innerHTML = candidato_jose
+        document.getElementById('votos_marcio').innerHTML = candidato_marcio
+        document.getElementById('votos_andre').innerHTML = candidato_andre
+        document.getElementById('votos_gabriel').innerHTML = candidato_gabriel
+        document.getElementById('nulos').innerHTML = votos_nulos
+        document.getElementById('brancos').innerHTML = votos_brancos
+
+        document.getElementById('percentagem_nulos').innerHTML = ((votos_nulos * 100) / total_votos).toFixed(2)
+        document.getElementById('percentagem_brancos').innerHTML = ((votos_brancos * 100) / total_votos).toFixed(2)
+
+        encerrar_votacao = prompt('Caso deseja encerrar votação digite[0], caso deseje continuar digite [1]: ')
+      }
+    }
+
+  </script>
+
+  <h2>Eleição Presidencial - Votação!</h2>
+
+  <h3>Descrição:</h3>
+
+  <p><span style="font-weight: bold;">Candidato:</span> José / Numero: 1</p>
+  <p><span style="font-weight: bold;">Candidato:</span>  Marcio / Numero: 2</p>
+  <p><span style="font-weight: bold;">Candidato:</span>  André / Numero: 3</p>
+  <p><span style="font-weight: bold;">Candidato:</span>  Gabriel / Numero: 4</p>
+
+  <p><span style="font-weight: bold;">Votar Nulo:</span> Numero: 5</p>
+  <p><span style="font-weight: bold;">Votar Branco:</span> Numero: 6</p>
+
+
+  <button type="button" onclick="verificandoVotos()">Começar Votação</button>
+
+  <hr/>
+
+  <h3>Numero de Votos:</h3>
+
+  <p><span style="font-weight: bold;">Candidato Jose:</span> <span id="votos_jose">?</span> Votos</p>
+  <p><span style="font-weight: bold;">Candidato Marcio:</span> <span id="votos_marcio">?</span> Votos</p>
+  <p><span style="font-weight: bold;">Candidato André:</span> <span id="votos_andre">?</span> Votos</p>
+  <p><span style="font-weight: bold;">Candidato Gabriel:</span> <span id="votos_gabriel">?</span> Votos</p>
+
+  <p><span style="font-weight: bold;">Votos Nulos:</span> <span id="nulos">?</span> Votos</p>
+  <p><span style="font-weight: bold;">Votos Brancos:</span> <span id="brancos">?</span> Votos</p>
+  <p><span style="font-weight: bold;">Percentagem Nulos:</span> <span id="percentagem_nulos">?</span> Votos</p>
+  <p><span style="font-weight: bold;">Percentagem Brancos:</span> <span id="percentagem_brancos">?</span> Votos</p>
+</body>
+</html>

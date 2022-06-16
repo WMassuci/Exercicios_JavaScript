@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio Laços JS</title>
+</head>
+<body>
+  <script>
+    /*Os números primos possuem várias aplicações dentro da Computação, por exemplo na Criptografia. Um número primo é aquele que é divisível apenas por um e por ele mesmo. Faça um programa que peça um número inteiro e determine se ele é ou não um número primo.*/ 
+
+
+    //pedir um numero inteiro
+    //determinar se ele é primo ou não
+
+    function verificarNumeroPrimo(){
+      let num = document.getElementById('numero').value 
+      let ehPrimo
+
+      for(let numero = 2; numero <= num; numero++){
+          ehPrimo = true
+
+        for(let divisor = 2; divisor < numero; divisor++){
+          if(numero % divisor == 0){
+            ehPrimo = false
+          }
+        }
+      }
+
+      if(ehPrimo){
+        document.getElementById('resposta').innerHTML = 'O Numero ' +num+ ' é primo'
+      }else{
+        document.getElementById('resposta').innerHTML = 'O Numero ' +num+ ' não é primo'
+      }
+    }
+
+  </script>
+
+  <h3>Verificando se o numero é primo ou não!</h3>
+
+  Informe um numero: <input type="number" id="numero"><br/>
+  <p id="resposta"></p>
+  <button type="button" onclick="verificarNumeroPrimo()">Verificar</button>
+</body>
+</html>

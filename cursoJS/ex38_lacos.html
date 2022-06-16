@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 38 laços js</title>
+</head>
+<body>
+  <script>
+    /*Foi feita uma estatística em cinco cidades brasileiras para coletar dados sobre acidentes de trânsito. Foram obtidos os seguintes dados:
+
+    Código da cidade;
+    Número de veículos de passeio (em 1999);
+    Número de acidentes de trânsito com vítimas (em 1999). 
+    
+    
+    Deseja-se saber:
+    Qual o maior e menor índice de acidentes de transito e a que cidade pertence;
+    Qual a média de veículos nas cinco cidades juntas;
+    Qual a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio.*/ 
+
+
+    //coletar dados de 5 cidades brasileiras
+    //coletar o codigo de cada uma
+    //perguntar oNúmero de veículos de passeio (em 1999)
+    //perguntar Número de acidentes de trânsito com vítimas (em 1999)
+
+    //Qual o maior e menor índice de acidentes de transito e a que cidade pertence
+    //Qual a média de veículos nas cinco cidades juntas
+    //Qual a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio
+
+    let quantidade_cidades = 5
+    let codigo_maior_acidente = 0
+    let codigo_menor_acidente = 0
+    let codigo = 0
+
+    let numero_veiculo_passeio = 0
+    let numero_acidente_vitima = 0
+
+    let maior_indice_acidente = 0
+    let menor_indice_acidente = 100000000000000
+
+    let soma_veiculos_menos = 0
+    let soma_veiculos = 0
+    let media_total_veiculos = 0
+    let media_cidade_menos_veiculos = 0
+
+    for(let contador = 1; contador <= quantidade_cidades; contador++){
+      codigo = prompt('Digite o codigo da cidade: ')
+      numero_veiculo_passeio = parseInt(prompt("Digite o numero de veiculos de passeio: "))
+      numero_acidente_vitima = parseInt(prompt("Digite o numero de acidente de vitima de transito: "))
+
+      if(numero_acidente_vitima > maior_indice_acidente){
+        maior_indice_acidente = numero_acidente_vitima
+        codigo_maior_acidente = codigo
+      }
+
+      if(numero_acidente_vitima < menor_indice_acidente){
+        menor_indice_acidente = numero_acidente_vitima
+        codigo_menor_acidente = codigo
+      }
+
+
+      if(numero_veiculo_passeio < 2000){    
+        soma_veiculos_menos += numero_veiculo_passeio
+      }
+
+      soma_veiculos += numero_veiculo_passeio
+      
+    }
+
+    media_total_veiculos = soma_veiculos / quantidade_cidades
+    media_cidade_menos_veiculos = soma_veiculos_menos / quantidade_cidades
+
+    document.write('O Maior indice de acidente de transito é ' +maior_indice_acidente+ ' pertence a cidade com o codigo ' +codigo_maior_acidente+ '<br/>')
+
+    document.write('O Menor indice de acidente de transito é ' +menor_indice_acidente+ ' pertence a cidade com o codigo ' +codigo_menor_acidente+ '<br/>')
+
+    document.write("<hr/>")
+
+    document.write('O Média de veiculos em todas as cinco cidades é:  ' +media_total_veiculos+ '<br/>')
+    document.write('O Média de veiculos em cidades em que o numero de veiculos é menos de 2000 é:  ' +media_cidade_menos_veiculos+ '<br/>')
+  </script>
+</body>
+</html>
