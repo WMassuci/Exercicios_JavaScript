@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 43 JS</title>
+</head>
+<body>
+  <script>
+    /*Em uma competição de salto em distância cada atleta tem direito a cinco saltos. No final da série de saltos de cada atleta, o melhor e o pior resultados são eliminados. O seu resultado fica sendo a média dos três valores restantes. Você deve fazer um programa que receba o nome e as cinco distâncias alcançadas pelo atleta em seus saltos e depois informe a média dos saltos conforme a descrição acima informada (retirar o melhor e o pior salto e depois calcular a média). Faça uso de uma lista para armazenar os saltos. Os saltos são informados na ordem da execução, portanto não são ordenados. O programa deve ser encerrado quando não for informado o nome do atleta. A saída do programa deve ser conforme o exemplo abaixo:
+
+    Atleta: Rodrigo Curvêllo
+
+    Primeiro Salto: 6.5 m
+    Segundo Salto: 6.1 m
+    Terceiro Salto: 6.2 m
+    Quarto Salto: 5.4 m
+    Quinto Salto: 5.3 m
+
+    Melhor salto:  6.5 m
+    Pior salto: 5.3 m
+    Média dos demais saltos: 5.9 m
+
+    Resultado final:
+    Rodrigo Curvêllo: 5.9 m*/ 
+
+    //OBS -> caso nao for informado o nome do atleta encerrar o programa!
+
+    //receber o nome do atleta
+    //receber as cinco distancias alçançadas pelo atleta em seu salto
+    //fazer o uso de uma lista para armazenar os saltos
+    //verificar o melhor salto
+    //verificar o pior salto
+    //e a media dos demais salto
+    //imprimir conforme o exemplo
+
+    let melhor_salto = 0
+    let menor_salto = 0
+    let media = 0
+    let total_saltos = 0
+
+    let nome
+    let salto = 0
+    let lista_salto = []
+
+    while(true){
+
+      nome = prompt("Informe o nome do Atleta: ")
+
+      if(nome === ''){
+        break
+      }
+      
+      for(let contador = 1; contador <= 5; contador++){
+        salto = parseFloat(prompt("Informe o " +contador+ " salto: "))
+        lista_salto.push(salto)
+      }
+
+      melhor_salto = Math.max.apply(null, lista_salto)
+      menor_salto = Math.min.apply(null, lista_salto)
+
+      for(let cont = 0; cont < lista_salto.length; cont++){
+        total_saltos += lista_salto[cont]
+      }
+
+      media = total_saltos / 5
+
+      document.write("Atleta: " +nome+ "<br/>")
+
+      lista_salto.forEach(function(valor, indice, array){
+        document.write(indice+ ' Salto: ' +valor+ '<br/>')
+      });
+
+      document.write("Melhor Salto: " +melhor_salto+ "<br/>")
+      document.write("Menor Salto: " +menor_salto+ "<br/>")
+      document.write("Média dos demais saltos: " +media+ "<br/>")
+    }
+
+   
+
+
+  </script>
+</body>
+</html>

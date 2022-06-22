@@ -44,7 +44,19 @@
     let nota = 0
     let maior = 0
     let menor = 0
-    
+    let aluno
+    let tot = 0 
+  
+  while(true){
+
+    tot = 0
+
+    aluno = prompt("Novo Aluno? [0 - nao] [1 - sim]: ")
+
+    if(aluno == 0){
+      break
+    }
+
     for(let contador = 1; contador <= 10; contador++){
       resposta = prompt("Digite a resposta da questão " +contador+ " : ")
 
@@ -53,6 +65,7 @@
 
            if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
 
@@ -60,6 +73,7 @@
         gabarito = 'B'
           if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
        
@@ -67,6 +81,7 @@
         gabarito = 'C'
           if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
 
@@ -74,6 +89,7 @@
         gabarito = 'D'
           if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
 
@@ -81,6 +97,7 @@
         gabarito = 'E'
           if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
 
@@ -88,6 +105,7 @@
         gabarito = 'E'
           if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
 
@@ -95,6 +113,7 @@
         gabarito = 'D'
           if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
 
@@ -102,6 +121,7 @@
         gabarito = 'C'
           if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
 
@@ -109,6 +129,7 @@
         gabarito = 'B'
           if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
 
@@ -116,11 +137,26 @@
         gabarito = 'A'
           if(resposta == gabarito){
             nota += 1
+            tot += 1
           }
       }
+
+      menor = tot
+      maior = tot
     }
 
-    document.write("Acertos: " +nota)
+  
+    if(tot > maior){
+      maior = tot
+    }
+
+    else if(tot < menor){
+      menor = tot
+    }
+  }
+
+    document.write('Maior: ' +maior+ '<br/>')
+    document.write('Menor: ' +menor+ '<br/>')
   </script>
 </body>
 </html>

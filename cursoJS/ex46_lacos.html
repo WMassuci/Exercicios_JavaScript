@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 46 laços js</title>
+</head>
+<body>
+  <script>
+    /*Faça um programa que mostre os n termos da Série a seguir:
+
+      S = 1/1 + 2/3 + 3/5 + 4/7 + 5/9 + ... + n/m. 
+    Imprima no final a soma da série.*/ 
+
+    let soma = 0
+    let aux1 = 1
+    let aux2 = 1
+    let n = 10
+
+    for(let cont = 1; cont <= n; cont++){
+      soma = soma + (aux1 / aux2)
+      aux1 = 1
+      aux2 = 2   
+    }
+
+    document.write(soma)
+  </script>
+</body>
+</html>
